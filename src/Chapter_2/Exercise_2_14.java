@@ -32,25 +32,22 @@ public class Exercise_2_14{
 
 		//Creating the necessary variables 
 		Scanner input = new Scanner(System.in);
-		DecimalFormat df = new DecimalFormat("$###.##");
+		DecimalFormat df = new DecimalFormat("##.####");
 		
-		System.out.print("\n\t\tEnter the monthly saving amount:  ");
-		double amount = input.nextDouble();
+		System.out.print("\n\t\tEnter weight in pounds:  ");
+		double pounds = input.nextDouble();
+		System.out.print("\n\t\tEnter height in inches:  ");
+		double inches = input.nextDouble();
 		
-		//calculation of minimum length
-		double firstMonth = (amount * (1 + (0.05/12)));
-		double secondMonth = amount + (firstMonth * (1 + (0.05/12)));
-		double thirdMonth = amount + (secondMonth * (1 + (0.05/12)));
-		double fourthMonth = amount + (thirdMonth * (1 + (0.05/12)));
-		double fifthMonth = amount + (fourthMonth * (1 + (0.05/12)));
-		double sixthMonth = amount + (fifthMonth * (1 + (0.05/12)));
 		
-		System.out.println("\n\t\tAfter the sixth month, the account value is -> " + df.format(firstMonth));
-		System.out.println("\n\t\tAfter the sixth month, the account value is -> " + df.format(secondMonth));
-		System.out.println("\n\t\tAfter the sixth month, the account value is -> " + df.format(thirdMonth));
-		System.out.println("\n\t\tAfter the sixth month, the account value is -> " + df.format(fourthMonth));
-		System.out.println("\n\t\tAfter the sixth month, the account value is -> " + df.format(fifthMonth));
-		System.out.println("\n\t\tAfter the sixth month, the account value is -> " + df.format(sixthMonth));
+		//calculations
+		double weightKg = (pounds * (0.45359237));
+		double heightM = inches *  0.0254;
+		double bmi = weightKg / (Math.pow(heightM, 2));
+		
+		
+		System.out.println("\n\t\tBMI is  -> \t" + df.format(bmi));
+
 		
 	}//close main method
 
