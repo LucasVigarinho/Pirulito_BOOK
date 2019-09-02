@@ -26,13 +26,11 @@ public class Exercise_1_13{
 	}//close constructor
 
 	/** Automatic generated main method */
-	@SuppressWarnings("unlikely-arg-type")
 	public static void main(String[] args) {
 
 		DecimalFormat df = new DecimalFormat ("###.#");
 		
 		//Creating the necessary variables 
-		double determinantD = (3.4 * 0.55) - (50.2 * 2.1);
 		double x = ((44.5 * .55) - (50.2 * 5.9)) / ((3.4 * .55) - (50.2 * 2.1));
 		double y = ((3.4 * 5.9) - (44.5 * 2.1)) / ((3.4 * .55) - (50.2 * 2.1));
 		String testFirst =  df.format((3.4 * x) + ( 50.2 * y));
