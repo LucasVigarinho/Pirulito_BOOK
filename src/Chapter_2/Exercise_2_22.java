@@ -32,7 +32,7 @@ public class Exercise_2_22{
 		double transform = number / 100.0;
 		
 		
-		System.out.print("\n\tThe area of the triangle is " + df.format(transform));
+		System.out.print("\n\tThe value transformed is " + df.format(transform));
 
 		input.close();
 

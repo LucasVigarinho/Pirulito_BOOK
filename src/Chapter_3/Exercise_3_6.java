@@ -1,7 +1,6 @@
 package Chapter_3;
 
 import java.util.Scanner;
-import java.text.DecimalFormat;
 
 /** 
  * 
