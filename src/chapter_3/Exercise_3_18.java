@@ -55,7 +55,7 @@ public class Exercise_3_18{
 		}
 
 
-
+		input.close();
 	}//close main method
 
 }//close class Exercise_3_16

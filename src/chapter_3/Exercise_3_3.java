@@ -32,7 +32,7 @@ public class Exercise_3_3{
 
 
 		
-		DecimalFormat df = new DecimalFormat ("###.#");
+		
 		Scanner input = new Scanner(System.in);
 
 		//Creating the necessary variables 

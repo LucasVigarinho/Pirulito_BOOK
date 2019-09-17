@@ -50,6 +50,8 @@ public class Exercise_2_19{
 		
 		System.out.print("\tThe area of the triangle is " + df.format(area));
 
+		input.close();
+		
 	}//close main method
 
 }//close class Exercise_2_19

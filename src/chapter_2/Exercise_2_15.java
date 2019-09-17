@@ -46,7 +46,7 @@ public class Exercise_2_15{
 		
 		
 		System.out.println("\n\t\tThe distance between the two points is -> \t" + df.format(distance));
-
+		input.close();
 		
 	}//close main method
 

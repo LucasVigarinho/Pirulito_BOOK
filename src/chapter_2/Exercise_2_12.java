@@ -46,7 +46,7 @@ public class Exercise_2_12{
 		double length = (Math.pow(speed, 2))/ ( 2 * accel);
 		
 		System.out.println("\n\t\tThe minimum runway length for this airplane is -> " + df.format(length));
-		
+		input.close();
 	}//close main method
 
 }//close class Exercise_2_12

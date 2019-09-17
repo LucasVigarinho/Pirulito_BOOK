@@ -58,7 +58,7 @@ public class Exercise_2_13{
 		System.out.println("\n\t\tAfter the sixth month, the account value is -> " + df.format(fourthMonth));
 		System.out.println("\n\t\tAfter the sixth month, the account value is -> " + df.format(fifthMonth));
 		System.out.println("\n\t\tAfter the sixth month, the account value is -> " + df.format(sixthMonth));
-		
+		input.close();
 	}//close main method
 
 }//close class Exercise_2_13

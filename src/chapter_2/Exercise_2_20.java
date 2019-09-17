@@ -39,6 +39,8 @@ public class Exercise_2_20{
 		
 		System.out.print("\tThe area of the triangle is " + df.format(interest));
 
+		input.close();
+		
 	}//close main method
 
 }//close class Exercise_2_20

@@ -108,7 +108,7 @@ public class Exercise_3_21{
 				System.out.print("\n\n\tDay of the week is " + dayW);
 				
 
-		 
+				input.close();
 		 
 	}//close main method
 

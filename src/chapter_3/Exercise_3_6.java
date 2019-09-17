@@ -61,7 +61,7 @@ public class Exercise_3_6{
 			System.out.println("\n\n\tObese");
 		}
 
-
+		input.close();
 
 
 }//close main method

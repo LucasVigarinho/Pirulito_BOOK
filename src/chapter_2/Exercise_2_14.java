@@ -48,7 +48,7 @@ public class Exercise_2_14{
 		
 		System.out.println("\n\t\tBMI is  -> \t" + df.format(bmi));
 
-		
+		input.close();
 	}//close main method
 
 }//close class Exercise_2_14

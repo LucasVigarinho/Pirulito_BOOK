@@ -27,7 +27,6 @@ public class Exercise_2_18{
 	public static void main(String[] args) {
 
 		
-		int a = 1;
 		System.out.println("\n\n");
 		System.out.println("\t\ta\taˆ2\taˆ3");
 		
