@@ -1,5 +1,9 @@
 package chapter_3;
 
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+
 /**
  * 
  *  (Geometry: point in a circle?) Write a program that prompts the user to enter a
@@ -8,7 +12,9 @@ package chapter_3;
  * circle, as shown in Figure 3.7a.
  * 
  * (Hint: A point is in the circle if its distance to (0, 0) is less than or equal to 10.
- * The formula for computing the distance is 2(x2 - x1)2 + (y2 - y1)2. Test your
+ * 										      _________2___________2_
+ * The formula for computing the distance is V(x2 - x1) + (y2 - y1)   . Test your
+ * 
  * program to cover all cases.) Two sample runs are shown below.
  * 
  * 	     y-axis |										 y-axis |
@@ -49,6 +55,22 @@ public class Exercise_3_22 {
 	/** creating the main method */
 	public static void main(String[] args) {
 		
+		/**  Creating the object scanner to absorb the user information */
+		Scanner input = new Scanner (System.in);
+		DecimalFormat df = new DecimalFormat("####.0");
+		
+		System.out.print("\n\n\tEnter a point with two coordinates: ");
+		double x = input.nextDouble();
+		double y = input.nextDouble();
+		
+		double calc = Math.pow((Math.pow((x * 2 - x * 1),2) + Math.pow((y * 2 - y * 1),2)), 0.5);
+		
+		if(calc < 10)
+		System.out.print("\n\n\tPoint (" + df.format(x) + ", " + df.format(y) + ") is in the circle");
+		else
+		System.out.print("\n\n\tPoint (" + df.format(x) + ", " + df.format(y) + ") is not in the circle");
+		
+		input.close();
 	}//closing the main method
 	
 }//closing class exercise_3_22
