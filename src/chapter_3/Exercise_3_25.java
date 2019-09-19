@@ -83,7 +83,9 @@ public class Exercise_3_25 {
 		}else {
 			System.out.println("\nTwo lines intersect in (" + df.format(x) + " and " + df.format(y) + "). \t\t" );
 		}
-
+		
+		input.close();
+		
 	}//closing the main method
 
 }//closing class exercise_3_25
