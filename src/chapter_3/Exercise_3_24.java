@@ -9,7 +9,7 @@ package chapter_3;
  * 
  * The card you picked is Jack of Hearts
  * 
-*/
+ */
 
 /** Defining the main class*/
 public class Exercise_3_24 {
@@ -21,7 +21,81 @@ public class Exercise_3_24 {
 
 	/** creating the main method */
 	public static void main(String[] args) {
-		
+
+		int rankN = (int) (Math.random() * 13) +1;
+		int suitN = (int) (Math.random() * 4) +1;
+
+		String rank = " ";
+		String suit = " ";
+
+		switch (rankN) {
+
+		case 1:
+			rank = "Ace";
+			break;
+		case 2:
+			rank = "2";
+			break;
+		case 3:
+			rank = "3";
+			break;
+		case 4:
+			rank = "4";
+			break;
+		case 5:
+			rank = "5";
+			break;
+		case 6:
+			rank = "6";
+			break;
+		case 7:
+			rank = "7";
+			break;
+		case 8:
+			rank = "8";
+			break;
+		case 9:
+			rank = "9";
+			break;
+		case 10:
+			rank = "10";
+			break;
+		case 11:
+			rank = "Jack";
+			break;
+		case 12:
+			rank = "Queen";
+			break;
+		case 13:
+			rank = "King";
+			break;
+		default:
+			rank = "N/A";
+		}
+
+		switch (suitN) {
+
+		case 1:
+			suit = "Clubs";
+			break;
+		case 2:
+			suit = "Diamonds";
+			break;
+		case 3:
+			suit = "Hearts";
+			break;
+		case 4:
+			suit = "Spades";
+			break;
+		default:
+			suit = "N/A";
+
+		}
+
+
+		//Print out the answer
+		System.out.print("\n\n\tThe card you picked is " + rank + " of " + suit);
+
 	}//closing the main method
-	
+
 }//closing class exercise_3_24
