@@ -1,5 +1,8 @@
 package chapter_3;
 
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
 /**
  * 
  * (Geometry: intersecting point) Two points on line 1 are given as (x1, y1) and (x2,
@@ -29,7 +32,11 @@ package chapter_3;
  * 
  * Two lines intersect in (a and b) and two lines are parallel in (c).
  * 
-*/
+ *    1 1 4 4 1 8 2 4 - result 2.4 and -2.4
+ *    
+ *    0 1 0 4 1 8 1 4 - Parallel
+ * 
+ */
 
 /** Defining the main class*/
 public class Exercise_3_25 {
@@ -41,7 +48,42 @@ public class Exercise_3_25 {
 
 	/** creating the main method */
 	public static void main(String[] args) {
-		
+		Scanner input = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat ("####.0");
+
+		//Creating the necessary variables 
+		System.out.println("\n\n\tEnter x1, y1, x2, y2, x3, y3, x4, y4:");
+		double x1 = input.nextDouble();
+		double y1 = input.nextDouble();
+		double x2 = input.nextDouble();
+		double y2 = input.nextDouble();
+		double x3 = input.nextDouble();
+		double y3 = input.nextDouble();
+		double x4 = input.nextDouble();
+		double y4 = input.nextDouble();
+
+
+		double a = y1 - y2;
+		double b = x1 - x2;
+		double c = y3 - y4;
+		double d = x3 - x4;
+		double e = (a * x1) - (b * y1);
+		double f = (c * x3) - (d * y3);
+
+
+
+		double x = ((e * d) - (b * f)) / ((a * d) - (b * c));
+		double y = ((a * f) - (e * c)) / ((a * d) - (b * c));
+
+
+		if ( x > 100000 || y > 100000) {
+
+			System.out.println("\nTwo lines are parallel in (c). \t\t" );
+
+		}else {
+			System.out.println("\nTwo lines intersect in (" + df.format(x) + " and " + df.format(y) + "). \t\t" );
+		}
+
 	}//closing the main method
-	
+
 }//closing class exercise_3_25
