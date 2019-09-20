@@ -21,7 +21,7 @@ public class Exercise_3_26 {
 
 	/** Defining the constructor of the class */
 	public Exercise_3_26() {
-
+		
 	}//closing constructor
 
 	/** creating the main method */
