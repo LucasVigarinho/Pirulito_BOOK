@@ -1,6 +1,7 @@
 package chapter_3;
 
-
+import java.text.DecimalFormat;
+import java.util.Scanner;
 
 /**
  * 
@@ -29,8 +30,30 @@ public class Exercise_3_34 {
 
 	/** creating the main method */
 	public static void main(String[] args) {
-	
 		
+		//creating the objects to absorb the user informations and to print out in a good format
+		Scanner input = new Scanner (System.in);
+		DecimalFormat df = new DecimalFormat("####.0");
+		
+		//Printing out the message to be the user guide
+		System.out.print("\n\n\tEnter three points for p0, p1, and p2: ");
+		double x0 = input.nextDouble();
+		double y0 = input.nextDouble();
+		double x1 = input.nextDouble();
+		double y1 = input.nextDouble();
+		double x2 = input.nextDouble();
+		double y2 = input.nextDouble();
+		
+		
+                                                   
+		//if statement to control the right answer
+		if (x2 > x1 && x2 > x0) {
+			System.out.print("\n\n\t(" + x2 + ", " + y2 + " is not on the line segment from  (" + x0 + ", " + y0 + ") to (" +  x1 + ", " + y1  + ")");
+		}else {
+			System.out.print("\n\n\t(" + x2 + ", " + y2 + " is on the line segment from (" + x0 + ", " + y0 + ") to (" +  x1 + ", " + y1  + ")");
+		}
+		
+		input.close();
 	}//closing the main method
 
 }//closing class exercise_3_29
