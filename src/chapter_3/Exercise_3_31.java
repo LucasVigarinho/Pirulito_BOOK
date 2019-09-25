@@ -1,6 +1,7 @@
 package chapter_3;
 
-
+import java.util.Scanner;
+import java.text.DecimalFormat;;
 
 /**
  * 
@@ -38,7 +39,33 @@ public class Exercise_3_31 {
 
 	/** creating the main method */
 	public static void main(String[] args) {
+		
+		//Creating necessary objects
+		Scanner input = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("####.0");
+		
+		//print out asking to give the user a opportunity to insert information
+		System.out.print("\n\n\tEnter the exchange rate from dollars to RMB: ");
+		double rate = input.nextDouble();
+		System.out.print("\n\n\tEnter 0 to convert dollars to RMB and 1 vice versa: ");
+		double convert = input.nextDouble();
+		System.out.print("\n\n\tEnter the dollar amount: ");
+		double amount = input.nextDouble();
+		
+		double ans = 0;
+		//calculation
+		if( convert == 0) {
+			ans = rate * amount;
+			System.out.print("\n\n\t $" + df.format(amount) + " is " + df.format(ans) + " vuan" );
+		}else if (convert == 1){
+			ans = amount / rate ;
+			System.out.print("\n\n\t" + df.format(amount) + "vuan is " + df.format(ans) + " $" );
+		}else {
+			System.out.print("Incorrect input. You should insert 0 ou 1");
+		}
 	
+		
+		input.close();
 		
 	}//closing the main method
 
