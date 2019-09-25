@@ -1,6 +1,7 @@
 package chapter_3;
 
-
+import java.util.Scanner;
+import java.text.DecimalFormat;
 
 /**
  * 
@@ -32,6 +33,34 @@ public class Exercise_3_33 {
 	/** creating the main method */
 	public static void main(String[] args) {
 	
+		//Creating the objects to format the information to be printed and to absord the user information
+		Scanner input = new Scanner (System.in);
+
+		
+		
+		//Print out the information to the user knows what has to be entered
+		System.out.print("\n\n\tEnter weight and price for package 1: ");
+		double weight1 = input.nextDouble();
+		double price1 = input.nextDouble();
+		System.out.print("\n\n\tEnter weight and price for package 2: ");
+		double weight2 = input.nextDouble();
+		double price2 = input.nextDouble();
+		
+		//calculation
+		double realPrice1 = price1 / weight1; 
+		double realPrice2 = price2 / weight2; 
+		
+		//if statement to control the right answer
+		if (realPrice1 > realPrice2) {
+			System.out.print("\n\n\tPackage 2 has a better price. ");
+		}else if (realPrice1 < realPrice2) {
+			System.out.print("\n\n\tPackage 1 has a better price. ");
+		}else {
+			System.out.print("\n\n\tTwo packages have the same price. ");
+		}//close if statement
+		
+		//close input object scanner
+		input.close();
 		
 	}//closing the main method
 
