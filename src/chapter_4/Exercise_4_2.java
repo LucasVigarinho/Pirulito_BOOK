@@ -26,14 +26,16 @@ package chapter_4;
  * Here is a sample run:
  * 
  * 
- * Enter point 1 (latitude and longitude) in degrees: 39.55, -116.25
- * Enter point 2 (latitude and longitude) in degrees: 41.5, 87.37
+ * Enter point 1 (latitude and longitude) in degrees: 39.55 -116.25
+ * Enter point 2 (latitude and longitude) in degrees: 41.5 87.37
  * The distance between the two points is 10691.79183231593 km
  * 
  *  
  */
 
 //necessary imports
+import java.util.Scanner;
+import java.text.DecimalFormat;
 
 //creating a public class
 public class Exercise_4_2 {
@@ -45,8 +47,30 @@ public class Exercise_4_2 {
 
 	//Creating the main method
 	public static void main (String[] args) {
-		
+		//creating the object to absorb the user iformation
+		Scanner input = new Scanner (System.in);
+		DecimalFormat df = new DecimalFormat("####.0000000000000");
+
+		//print out the message to absorb the user insert
+		System.out.print("\n\n\tEnter point 1 (latitude and longitude) in degrees: ");
+		double x1 = input.nextDouble();
+		double y1 = input.nextDouble();
+		System.out.print("\n\n\tEnter point 2 (latitude and longitude) in degrees: ");
+		double x2 = input.nextDouble();
+		double y2 = input.nextDouble();
+
+		//calculation
+		double averageEarthRadius = 6371.01;
+
+		 double d = averageEarthRadius * Math.acos((Math.sin(Math.toRadians(x1)) * Math.sin(Math.toRadians(y1))) + 
+				    					(Math.cos(Math.toRadians(x1)) * Math.cos(Math.toRadians(y1)) * Math.cos(Math.toRadians(y2) - Math.toRadians(x2))));
+		//print out the answer
+		System.out.print("\n\n\tThe distance between the two points is  " + df.format(d) + " km");
+
+		//closing object
+		input.close();
+
 	}//closing the main method
-	
-	
+
+
 }//closing the public class Exercise_4_2
