@@ -1,5 +1,6 @@
 package chapter_4;
 
+
 /**
  * 
  * @author lucasmaximo
@@ -35,6 +36,8 @@ package chapter_4;
  */
 
 //necessary imports
+import java.util.Scanner;
+import java.text.DecimalFormat;
 
 //creating a public class
 public class Exercise_4_1 {
@@ -46,6 +49,23 @@ public class Exercise_4_1 {
 
 	//Creating the main method
 	public static void main (String[] args) {
+		//creating the object to absorb the user iformation
+		Scanner input = new Scanner (System.in);
+		DecimalFormat df = new DecimalFormat("####.00");
+		
+		//print out the message to absorb the user insert
+		System.out.print("\n\n\tEnter the length from the center to a vertex: ");
+		double r = input.nextDouble();
+		
+		//calculation
+		double s = (2 * r * Math.sin(Math.PI/5));
+		double area = ((5 * Math.pow(s, 2)) / (4 *( Math.tan((Math.PI/5)))));
+		
+		//print out the answer
+		System.out.print("\n\n\tThe area of the pentagon is " + df.format(area));
+		
+		//closing object
+		input.close();
 		
 	}//closing the main method
 	
