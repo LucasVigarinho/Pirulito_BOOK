@@ -17,6 +17,8 @@ package chapter_4;
  */
 
 //necessary imports
+import java.util.Scanner;
+
 
 //creating a public class
 public class Exercise_4_8 {
@@ -28,6 +30,20 @@ public class Exercise_4_8 {
 
 	//Creating the main method
 	public static void main (String[] args) {
+		
+		//creating an object to absorb the user information
+		Scanner input = new Scanner (System.in);
+		
+		//print out the asking for the user input 
+		System.out.print("\n\n\tEnter an ASCII code (between 0 and 127: ");
+		int code = input.nextInt();
+		char codeASCII = (char) code; //transform the code in character ASCII
+		
+		//printing out the message and the code ASCII
+		System.out.print("\n\n\tThe character for ASCII code 69 is " + codeASCII);
+		
+		//closing the object input
+		input.close();
 		
 	}//closing the main method
 	
