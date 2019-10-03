@@ -99,8 +99,8 @@ public class Exercise_4_11 {
 	
 
 	
-	//closing the object used
-		
+		//closing the object used
+		input.close();
 		
 		
 	}//closing the main method
