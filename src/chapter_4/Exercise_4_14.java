@@ -65,7 +65,7 @@ public class Exercise_4_14 {
 
 		//closing the object used
 		input.close();
-	}
+	}//closing main method
 
 
 
