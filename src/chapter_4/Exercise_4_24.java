@@ -38,6 +38,8 @@ public class Exercise_4_24 {
 
 		System.out.print("\n\n\tThe three cities in alphabetical order are ");
 		ascend(city1, city2, city3);
+		
+		input.close();
 	}//closing the main method
 
 	//create the method in order to print the cities in ascendent order
@@ -64,7 +66,9 @@ public class Exercise_4_24 {
 			
 		}else {
 			System.out.print(city3 + " " + city2 + " " + city1);
-		}
+		}//close if statement
+		
+		
 
 	}//closing the method ascend
 
