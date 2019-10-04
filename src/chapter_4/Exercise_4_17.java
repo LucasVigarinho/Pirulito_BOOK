@@ -42,6 +42,9 @@ public class Exercise_4_17 {
 			printOut(month, year);
 		}//closing if statement
 		
+		input.close();
+		input2.close();
+		
 	}//closing main method
 	
 	/** creating a support method to make the code clean */

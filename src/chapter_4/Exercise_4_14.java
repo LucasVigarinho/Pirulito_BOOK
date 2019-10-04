@@ -57,7 +57,7 @@ public class Exercise_4_14 {
 			System.out.print("\n\n\tThe numeric value for grade F is 0");
 		break;
 		default:
-			System.out.print("\n\n\t" + c + " is an invalid grade");;
+			System.out.print("\n\n\t" + c + " is an invalid grade");
 
 
 		}//closing switch statement
