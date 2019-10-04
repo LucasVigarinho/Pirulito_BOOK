@@ -2,8 +2,15 @@ package chapter_4;
 
 /**    ************* Description of the Exercise_4_24 *************
  * 
- * 		(Process a string) Write a program that prompts the user to enter a string and displays
- * 		its length and its first character.
+ * 		(Order three cities) Write a program that prompts the user to enter three cities and
+ * 		displays them in ascending order. Here is a sample run:
+ * 
+ * 
+ * 		Enter the first city: Chicago
+ * 		Enter the second city: Los Angeles
+ * 		Enter the third city: Atlanta
+ * 		The three cities in alphabetical order are Atlanta Chicago Los Angeles
+ * 
  * 
  *  @author lucasmaximo
  *  
