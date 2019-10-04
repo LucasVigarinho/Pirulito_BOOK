@@ -70,7 +70,7 @@ public class Exercise_3_9{
 		int d10 = (d1 * 1 + d2 * 2 + d3 * 3 + d4 * 4 + d5 * 5 + d6 * 6 + d7 * 7 + d8 * 8 + d9 * 9) % 11;
 		
 		if (d10==10){
-			System.out.print(d1);
+			System.out.print("\n\n\tThe ISBN-10 number is "+ d1);
 			System.out.print(d2);
 			System.out.print(d3);
 			System.out.print(d4);
@@ -81,7 +81,7 @@ public class Exercise_3_9{
 			System.out.print(d9);
 			System.out.print("X");
 		}else {
-			System.out.print(d1);
+			System.out.print("\n\n\tThe ISBN-10 number is " + d1);
 			System.out.print(d2);
 			System.out.print(d3);
 			System.out.print(d4);

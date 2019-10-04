@@ -92,7 +92,9 @@ public class Exercise_4_18 {
 			System.err.print("\n\n\tInvalid input");
 
 		}//closing if statement
-
+		
+		//closing object
+		input.close();
 
 	}//closing the main method
 
