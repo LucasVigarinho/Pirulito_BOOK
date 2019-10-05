@@ -15,7 +15,7 @@ package chapter_4;
 /** Necessary imports */
 import java.util.Scanner;
 
-/** Creating the class named Exercise_4_21 */
+/** Creating the class named Exercise_4_26 */
 public class Exercise_4_26 {
 
 	/** Creating the main method */
