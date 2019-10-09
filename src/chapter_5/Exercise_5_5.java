@@ -50,7 +50,7 @@ public class Exercise_5_5 {
 	
 			kilograms+= var;
 		}//close for loop
-		//generate random
+	
 
 
 	}//closing the main method
