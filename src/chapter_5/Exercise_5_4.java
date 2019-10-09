@@ -35,7 +35,7 @@ public class Exercise_5_4{
 		int miles = 1;
 		
 		//printing out the first message
-		System.out.print("\n\n\tKilograms  Pounds");
+		System.out.print("\n\n\tMiles  Kilometers");
 		
 		//initiate for loop in order to fill the results expect
 		for(int i = 1; i <= 10; i++) {
