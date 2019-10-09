@@ -21,14 +21,28 @@ package chapter_5;
 
 /** Necessary imports */
 
+import java.text.DecimalFormat;
 
-/** Creating the class named Exercise_5_4 */
-public class Exercise_5_4 {
+/** Creating the class named Exercise_5_4*/
+public class Exercise_5_4{
 
 	/** Creating the main method */
 	public static void main(String[] arg) {
 		
-		//generate random
+		DecimalFormat df = new DecimalFormat("####.000");
+		
+		//Create the necessary variables
+		int miles = 1;
+		
+		//printing out the first message
+		System.out.print("\n\n\tKilograms  Pounds");
+		
+		//initiate for loop in order to fill the results expect
+		for(int i = 1; i <= 10; i++) {
+			miles = i;
+			double kilometers = 1.609 * miles;
+			System.out.print("\n\n\t" + miles + "\t" + df.format(kilometers));
+		}//close for loop
 
 		
 	}//closing the main method
