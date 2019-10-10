@@ -14,7 +14,7 @@ package chapter_5;
  * */
 
 /** Necessary imports */
-
+import java.util.Scanner;
 
 /** Creating the class named Exercise_5_16 */
 public class Exercise_5_16 {
@@ -22,10 +22,26 @@ public class Exercise_5_16 {
 	/** Creating the main method */
 	public static void main(String[] arg) {
 		
+		//creating the Scanenr object
+		Scanner input = new Scanner(System.in);
 		
 		//create the necessary variables
-	
+		System.out.print("\n\n\tInsert the integer number to be anilysed -> ");
+		int number = input.nextInt();
+		int count = 1;
+		System.out.print("\n\n\t");
 		
+		do{
+			if(number % count == 0  && count != 1) {
+				System.out.print(count + ", ");
+				number /= count;
+			}else {
+				count++;
+			}
+			
+		}while(number / count  != 1);
+		
+		System.out.println(number + ".");
 	}//closing the main method
 
 
