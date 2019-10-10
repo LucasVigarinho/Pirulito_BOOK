@@ -24,8 +24,21 @@ public class Exercise_5_15 {
 		
 		
 		//create the necessary variables
-	
-		
+		int count = 0;
+		System.out.print("\n\n\t" );
+
+		for (char i = '!'; i <= '~'; i++) {
+			System.out.print(i + " ");
+			count++;
+			if(count == 10) {
+				System.out.print("\n" );
+				System.out.print("\t" );
+				count = 0;
+			}else {
+				
+			}//closing if statement
+
+		}//closing for loop
 	}//closing the main method
 
 
