@@ -54,7 +54,8 @@ public class Exercise_5_8 {
 		
 		System.out.print("\n\n\tThe student with the highest score was -> " + best + " with " + highest + " points of score ");
 
-		
+		input.close();
+		input1.close();
 
 		
 	}//closing the main method
