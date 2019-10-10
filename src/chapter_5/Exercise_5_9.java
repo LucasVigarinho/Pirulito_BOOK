@@ -3,11 +3,12 @@ package chapter_5;
 
 /**    ************* Description of the Exercise_5_9 *************
  * 
- * 		(Generate vehicle plate numbers) Assume a vehicle plate number consists of three
- * 		uppercase letters followed by four digits. Write a program to generate a plate
- * 		number.
+ * 		(Find the two highest scores) Write a program that prompts the user to enter the
+ * 		number of students and each student’s name and score, and finally displays the
+ * 		student with the highest score and the student with the second-highest score.
+ * 		
  * 
- *  @author lucasmaximo
+ * 		@author lucasmaximo
  *  
  * */
 

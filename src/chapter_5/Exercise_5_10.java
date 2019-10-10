@@ -3,9 +3,9 @@ package chapter_5;
 
 /**    ************* Description of the Exercise_5_10 *************
  * 
- * 		(Generate vehicle plate numbers) Assume a vehicle plate number consists of three
- * 		uppercase letters followed by four digits. Write a program to generate a plate
- * 		number.
+ * 		(Find numbers divisible by 5 and 6) Write a program that displays all the numbers
+ * 		from 100 to 1,000, ten per line, that are divisible by 5 and 6. Numbers are
+ * 		separated by exactly one space.
  * 
  *  @author lucasmaximo
  *  
