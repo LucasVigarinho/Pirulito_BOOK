@@ -38,7 +38,6 @@ public class Exercise_5_20 {
 				}//closing if statement
 			}//closing for loop
 			
-
 			//open if statement 
 			if(prime) {
 				System.out.print(i + "\t");
