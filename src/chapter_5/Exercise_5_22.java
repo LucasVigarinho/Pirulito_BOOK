@@ -49,20 +49,97 @@ package chapter_5;
  *  
  * */
 
-/** Necessary imports */
+/**    ************* Description of the Exercise_5_21 *************
+ * 
+ * 		(Financial application: compare loans with various interest rates) Write a program
+ * 		that lets the user enter the loan amount and loan period in number of years
+ * 		and displays the monthly and total payments for each interest rate starting from
+ * 		5% to 8%, with an increment of 1/8. Here is a sample run:
+ * 
+ * 
+ * 		Loan Amount: 10000
+ * 		Number of Years: 5
+ * 		Interest Rate 	Monthly Payment 		Total Payment
+ * 		5.000% 			188.71 					11322.74
+ * 		5.125% 			189.29 					11357.13
+ * 		5.250% 			189.86 					11391.59
+ * 		...
+ * 		7.875% 			202.17 					12129.97
+ * 		8.000% 			202.76 					12165.84
+ * 
+ * 
+ *  @author lucasmaximo
+ *  
+ * */
 
+/** Necessary imports */
+import java.util.Scanner;
+import java.text.DecimalFormat;
 
 /** Creating the class named Exercise_5_22 */
 public class Exercise_5_22 {
 
-	/** Creating the main method */
-	public static void main(String[] arg) {
+	//create the main method
+	public static void main(String[] args) {
+
+		//create a variable to be utilized for Scanner Method
+		Scanner input = new Scanner(System.in);
+		//create the format model for digits after coma
+
+		DecimalFormat twoDigits = new DecimalFormat("##.00");
+
+		//Open the possibility to the user input the Amount
+		System.out.print("\n\tThe Total Amount?  -> ");
+		double loanAmount = input.nextDouble();//create a variable who is going to receive the inputed number
+
+		//Open the possibility to the user input the number of years			
+		System.out.print("\n\tNumber of Years?  ->");
+		double numberOfYear = input.nextDouble();//create a variable who is going to receive the inputed number
+
+		System.out.print("\n\tAnnual Interest Rate:  ->");
+		double annualInterestRate = input.nextDouble();//create a variable who is going to receive the inputed number
+		
+		//Print out the Header of the information
+		System.out.println("\n\n\t\tPayment " + "\t" + "\t" + "\t" + "Interest " + "\t" + "\t" + "\t" + "Principal " + "\t\tBalance");
 
 
-	
-		//create the necessary variables
+		int months = 12;
+		double balance = loanAmount, principal, interest;
+		
+		// Create a for loop to print out From 5% to 8%...
+		for (int i = 1; i <= numberOfYear*12 ; i++) {
 
-	}//closing the main method
+			
+			// Obtain the monthly interest rate
+			double monthlyInterestRate = annualInterestRate / (months*100);
+
+			//create the variable to apply the equation to subtract the monthly payment
+			double monthlyPayment = loanAmount * monthlyInterestRate / (1 - 1/Math.pow(1 + monthlyInterestRate, numberOfYear * months));
+			
+			//create the variable total payment
+			interest = monthlyInterestRate * balance;
+			principal = monthlyPayment - interest;
+			balance = balance - principal;
+			
+		
+
+			
+			
+
+			//print the results inside the for loop
+			System.out.print("\n\t\t" + i + "\t" + "\t" + "\t"  + "\t"  );
+			System.out.print(twoDigits.format(interest)  + "\t" + "\t" + "\t"+ "\t" );
+			System.out.print( twoDigits.format(principal)+ "\t" + "\t" + "\t");
+			System.out.print( twoDigits.format(balance));
+		}
+		//printing a space for better visualization
+		System.out.println(" ");
+
+		//close the input used for Scanner method
+		input.close();
+
+	}//closing main method
 
 
 }//closing the class_5_22
+
