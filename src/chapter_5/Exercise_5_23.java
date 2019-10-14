@@ -32,10 +32,31 @@ public class Exercise_5_23 {
 	public static void main(String[] arg) {
 
 
-	
-		//create the necessary variables
+
+		//create the necessary variable
+		double rightToLeft = 0.0;
+		double leftToRight = 0.0;
+
+		//create a for loop to start count and summarize from the right to the left
+		for (int i = 100000000; i >= 1; i--) {
+			rightToLeft += 1.0 / i;
+		}//closing the right to the left for loop
+		
+		//create a for loop to start count and summarize from the left to the right
+		for (int i = 1; i <= 100000000; i++) {
+			leftToRight += 1.0 / i;
+		}//closing the right to the left for loop
+
+		//difference variable to identify the difference between the two sums
+		double difference = rightToLeft - leftToRight;
+		
+		//print out the answers
+		System.out.print("\n\n\tComputing from right to left " + rightToLeft);
+		System.out.print("\n\tComputing from left to right " + leftToRight);
+		
+		//print out the difference
+		System.out.println("\n\tThe difference is " + ((rightToLeft < leftToRight)? (difference + " (Right to the left is smaller them left to the right)." ): (difference + " (Right to the left is bigger them left to the right).")));
 
 	}//closing the main method
-
 
 }//closing the class_5_23
