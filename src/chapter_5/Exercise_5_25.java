@@ -27,7 +27,6 @@ public class Exercise_5_25 {
 
 		//create the necessary variables
 		double extra = 0;
-		double temp = 0;
 		int l = 0;
 		//create the for loop for the description
 		for(int i = 10000; i <=100000 ; i +=10000) {
