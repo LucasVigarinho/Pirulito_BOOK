@@ -29,6 +29,8 @@ package chapter_5;
 
 /** Necessary imports */
 
+import java.util.Scanner;
+import java.text.DecimalFormat;
 
 /** Creating the class named Exercise_5_30 */
 public class Exercise_5_30 {
@@ -36,10 +38,30 @@ public class Exercise_5_30 {
 	/** Creating the main method */
 	public static void main(String[] arg) {
 
-
-	
+		//create the necessary objects
+		Scanner input = new Scanner(System.in);
+		DecimalFormat df3 = new DecimalFormat("####.000");
+		
+		
 		//create the necessary variables
+		System.out.print("\n\n\tPrease, enter an amout (e.g., 100) -> ");
+		double amount = input.nextDouble();
 
+		System.out.print("\n\tPlease, enter the annual interest rate - > ");
+		double interestRate = (input.nextDouble()/100.0);
+		
+		System.out.print("\n\tPlease, enter the number of months (e.g, 6) -> ");
+		int months = input.nextInt();
+		double result = 0;
+		//calculation
+		
+		
+		//open a for loop in order to calculate, according to the number of months
+		for(int i = 0; i < months; i++) {
+			 result = (result + amount) * (1 + (interestRate / 12.0));
+			System.out.print("\n\tThe amount in the saving account after " + (i+1) + " month is -> " + df3.format(result));
+		}//closing for loop
+	
 	}//closing the main method
 
 
