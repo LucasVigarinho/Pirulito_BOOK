@@ -19,6 +19,7 @@ package chapter_5;
  * 
  * 		Your goal is to earn $30,000 a year. Write a program that finds the minimum sales
  * 		you have to generate in order to make $30,000.
+ * 
  *  @author lucasmaximo
  *  
  * */

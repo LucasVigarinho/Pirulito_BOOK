@@ -3,7 +3,9 @@ package chapter_5;
 
 /**    ************* Description of the Exercise_5_38 *************
  * 
-
+ * 		(Decimal to octal) Write a program that prompts the user to enter a decimal
+ * 		integer and displays its corresponding octal value. Don’t use Java’s Integer
+ * 		.toOctalString(int) in this program.
  * 
  *  @author lucasmaximo
  *  

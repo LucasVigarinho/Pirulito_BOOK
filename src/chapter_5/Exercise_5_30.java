@@ -62,6 +62,7 @@ public class Exercise_5_30 {
 			System.out.print("\n\tThe amount in the saving account after " + (i+1) + " month is -> " + df3.format(result));
 		}//closing for loop
 	
+		input.close();
 	}//closing the main method
 
 
