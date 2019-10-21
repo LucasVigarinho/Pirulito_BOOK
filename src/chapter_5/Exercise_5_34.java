@@ -66,7 +66,7 @@ public class Exercise_5_34 {
 				userCount+=1;
 			}else if (user == 0 && computer==0) {
 				System.out.println("\n\tThe computer is scissor." +" You are scissor. " + " - It is a draw");
-
+ 
 			}else if (user == 1 && computer==1) {
 				System.out.println("\n\tThe computer is rock."+" You are rock. " + " - It is a draw");				
 
