@@ -23,12 +23,18 @@ public class Exercise_5_35 {
 	/** Creating the main method */
 	public static void main(String[] arg) {
 
+		double result = 0.0;
+
 		//create the necessary objects
-	
-		//calculation
+		for (int x = 1; x < 625; x++) {
+
+			result += (1/(Math.pow(x, 0.5)+Math.pow(x+1, 0.5)));
+
+		}
 		
-		
-		
+		System.out.print("\n\n\tResult is -> " + result);
+
+
 	}//closing the main method
 
 
