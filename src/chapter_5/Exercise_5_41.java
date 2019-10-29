@@ -24,7 +24,7 @@ package chapter_5;
  * */
 
 /** Necessary imports */
-
+import java.util.Scanner;
 
 /** Creating the class named Exercise_5_41 */
 public class Exercise_5_41 {
@@ -32,10 +32,39 @@ public class Exercise_5_41 {
 	/** Creating the main method */
 	public static void main(String[] arg) {
 
+		
 		//create the necessary objects
-		
-		
+		Scanner input = new Scanner (System.in);
+		int count = 0;
+		int last = 0;
+		int number = 0;
 		//calculation
+		System.out.print("\n\n\t" + "Write a program that reads integers, finds the largest of them,\n" + 
+				"\tand counts its occurrences. Assume that the input ends with number 0.\n" + 
+				"\t ");
+		System.out.print("\n\n\t" + "Enter numbers: ");
+		
+		//create the while loop in order to test the insertions
+		while ((number = input.nextInt())!= 0) {
+		
+			//create an if statement in order to test all the possibilities
+			if (number > last) {
+				last = number;
+				count = 1;
+			}else if (number == last) {
+				count++;
+			}else {
+				
+			}//closing if statement
+	
+		}//closing while loop
+		
+		//print out the correct answer
+		System.out.print("\n\n\tThe large number is \t\t\t\t-> " + last);
+		System.out.print("\n\tThe occurrence count of the largest number is \t-> " + count);
+		
+		//closing the object
+		input.close();
 		
 	}//closing the main method
 
