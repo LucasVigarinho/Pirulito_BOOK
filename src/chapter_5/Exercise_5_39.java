@@ -42,7 +42,7 @@ public class Exercise_5_39 {
 		double salesXcomission = 0;
 		
 		//calculation
-		//Open a for loop in order to calculate the ranges
+		//Open a do while loop in order to calculate the ranges
 		do {
 			//always generates a new value of salesXcomission to descont the actual value of the sales
 			salesXcomission = comission = 0;
