@@ -17,6 +17,7 @@ package chapter_5;
  * */
 
 /** Necessary imports */
+import java.util.Scanner;
 
 
 /** Creating the class named Exercise_5_46 */
@@ -26,9 +27,16 @@ public class Exercise_5_46 {
 	public static void main(String[] arg) {
 
 		//create the necessary objects
+		Scanner input = new Scanner (System.in);
 		
-		
-		//calculation
+		//create the necessary variable
+		System.out.print("\n\n\tEnter a string: ");
+		String user = input.nextLine();
+		System.out.print("\n\t");
+		//create a for loop in order to print the opposite order
+		for (int i = user.length()-1; i >= 0; i--) {
+			System.out.print(user.charAt(i));
+		}//closing for loop
 		
 	}//closing the main method
 
