@@ -22,7 +22,7 @@ package chapter_5;
  * */
 
 /** Necessary imports */
-
+import java.util.Scanner;
 
 /** Creating the class named Exercise_5_44 */
 public class Exercise_5_44 {
@@ -31,7 +31,17 @@ public class Exercise_5_44 {
 	public static void main(String[] arg) {
 
 		//create the necessary objects
-		
+		Scanner input = new Scanner(System.in);
+
+		// Prompt the user to enter a short integer
+		System.out.print("\n\n\tEnter an integer: ");
+		short number = input.nextShort();
+	
+		String bits = Integer.toBinaryString(number);
+
+
+		// Display result
+		System.out.println("\n\n\tThe bits are " + bits);
 		
 		//calculation
 		
