@@ -20,7 +20,7 @@ package chapter_5;
  * */
 
 /** Necessary imports */
-
+import java.util.Scanner;
 
 /** Creating the class named Exercise_5_43 */
 public class Exercise_5_43 {
@@ -29,10 +29,19 @@ public class Exercise_5_43 {
 	public static void main(String[] arg) {
 
 		//create the necessary objects
-		
+		Scanner input = new Scanner(System.in);
+		System.out.print("\n\n\tType the number limit -> ");
+		int number = input.nextInt();
+		int count = 0;
 		
 		//calculation
+		for (int i =1; i < number; i++) {
+			for (int j = i; j < number; j++) {
+				count+=1;
+			}
+		}//closing for loop
 		
+		System.out.print("\n\n\tTotal of combinations -> " + count);
 	}//closing the main method
 
 
