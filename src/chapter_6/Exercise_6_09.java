@@ -47,16 +47,6 @@ public class Exercise_6_09{
 			
 		}//closing for loop
 
-
-
-		//create a variable necessary to count
-
-
-		//create a for loop in order to test all the letters
-		//closing for loop
-
-		//print out the messages 
-
 	}//closing the main method
 
 	// Convert from feet to meters 
