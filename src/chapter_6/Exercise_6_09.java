@@ -27,9 +27,7 @@ package chapter_6;
  * @author lucasmaximo
  *
  */
-
-/** Necessary imports */
-import java.util.Scanner;
+import java.text.DecimalFormat;
 
 /** Creating the class named Exercise_6_09*/
 public class Exercise_6_09{
@@ -37,23 +35,44 @@ public class Exercise_6_09{
 	/** Creating the main method */
 	public static void main(String[] arg) {
 
-		//create the necessary objects
+		DecimalFormat df1 = new DecimalFormat("##0.0");
+		DecimalFormat df3 = new DecimalFormat("##0.000");
 		
+		System.out.print("\n\tFeet\tMeters\t\tMeters\tFeet" );
+		int count = 15;
+		//creating a for loop 
+		for(int i = 1; i <= 10; i++) {
+			System.out.print("\n\t" + df1.format(i) + "\t" + df3.format(footToMeter(i)) + "\t|\t"
+									+ df1.format(count+=5) + "\t" + df3.format(meterToFoot(count)));
+			
+		}//closing for loop
 
-		//print out the message to be the user guide in the interaction
-		
-		//Create a variable to absorb the user insertion
-		
+
 
 		//create a variable necessary to count
-		
-		
+
+
 		//create a for loop in order to test all the letters
 		//closing for loop
-		
+
 		//print out the messages 
-		
+
 	}//closing the main method
 
+	// Convert from feet to meters 
+	public static double footToMeter(double foot) {
+		
+		double meter = 0.305 * foot;
+		
+		return meter;
+		
+	}
+
+	// Convert from meters to feet 
+	public static double meterToFoot(double meter) {
+		double foot = 3.279 * meter;
+		
+		return foot;
+	}
 
 }//closing the class_6_09
