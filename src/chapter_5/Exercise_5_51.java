@@ -1,7 +1,6 @@
 package chapter_5;
 
 
-
 /**    ************* Description of the Exercise_5_51 *************
  * 
  * 
@@ -23,19 +22,63 @@ package chapter_5;
  * */
 
 /** Necessary imports */
-
+import java.util.Scanner;
 
 /** Creating the class named Exercise_5_51 */
 public class Exercise_5_51{
-	
+
 	/** Creating the main method */
 	public static void main(String[] arg) {
 
 		//create the necessary objects
+		Scanner input1 = new Scanner(System.in);
+		Scanner input2 = new Scanner(System.in);
+
+
+		//print out the message to be the user guide in the interaction
+		System.out.print("\n\n\tEnter the first string: ");
+		//Create a variable to absorb the user insertion
+		String firstString = input1.nextLine();
+		//print out the message to be the user guide in the interaction
+		System.out.print("\n\n\tEnter the second string: ");
+		//Create a variable to absorb the user insertion
+		String secondString = input2.nextLine();
+
+
+		//create a variable necessary to count
+		int	numb = 0;
+		boolean test = false;
+		String builder = "";
+
 		
+		if(firstString.length() < secondString.length()) {
+			numb = firstString.length();
+		}else {
+			numb = secondString.length();
+		}
+		//create a for loop in order to test all the letters
+		for(int i = 0; i < numb; i++) {
+			
+			int charNumb1 = (int) firstString.charAt(i);
+			int charNumb2 = (int) secondString.charAt(i);
+			
+			if (charNumb1 == charNumb2 && test != true) {
+				builder += String.valueOf(firstString.charAt(i));
+			}else {
+				test = true;
+			}
+
+		}//closing for loop
 		
-		//calculation
+		//print out the messages 
+		if(builder.length() <= 0) {
+			System.out.print("\n\t" + firstString + " and " + secondString + "have no common prefix");
+		}else {
+			System.out.print("\n\tThe number of uppercase letters is: " + builder);
+		}
 		
+		input1.close();
+		input2.close();
 	}//closing the main method
 
 
