@@ -26,23 +26,34 @@ public class Exercise_6_04{
 	/** Creating the main method */
 	public static void main(String[] arg) {
 
-		//create the necessary objects
-		
+		Scanner input = new Scanner (System.in);
 
-		//print out the message to be the user guide in the interaction
-		
-		//Create a variable to absorb the user insertion
-		
+		System.out.print("\n\n\tType the number to be test as Palindrome -> ");
+		int number = input.nextInt();
+		System.out.print("\n\n\t" + (reverse(number)));
 
-		//create a variable necessary to count
-		
+		input.close();
+	}//closing the main method
+
+	/** reverse method */
+	public static int reverse(int number) {
+		String numb = Integer.toString(number);
+		String rev = "";
+		//create a for loop in order to reverse the String
+		for (int i = (numb.length()-1); i >= 0; i--) {
+			rev += numb.charAt(i);
+		}//closing for loop
+
+		return Integer.parseInt(rev);
+	}//close reverse method
+
 		
 		//create a for loop in order to test all the letters
 		//closing for loop
 		
 		//print out the messages 
 		
-	}//closing the main method
+
 
 
 }//closing the class_6_04
