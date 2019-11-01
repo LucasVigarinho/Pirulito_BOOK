@@ -20,23 +20,43 @@ public class Exercise_6_10{
 	/** Creating the main method */
 	public static void main(String[] arg) {
 
-		//create the necessary objects
-		
+		System.out.println("The first prime numbers less then 1000 are \n");
+		printPrimeNumbers(1000);
+	}
 
-		//print out the message to be the user guide in the interaction
-		
-		//Create a variable to absorb the user insertion
-		
+	public static void printPrimeNumbers(int numberOfPrimes) {
+		final int NUMBER_OF_PRIMES_PER_LINE = 10; // Display 10 per line
+		int count = 0; // Count the number of prime numbers
+		int number = 2; // A number to be tested for primeness
 
-		//create a variable necessary to count
-		
-		
-		//create a for loop in order to test all the letters
-		//closing for loop
-		
-		//print out the messages 
-		
-	}//closing the main method
+		// Repeatedly find prime numbers
+		while (count < numberOfPrimes) {
+			// Print the prime number and increase the count
+			if (isPrime(number) && number < 1000) {
+				count++; // Increase the count
+				if (count % NUMBER_OF_PRIMES_PER_LINE == 0) {
+					// Print the number and advance to the new line
+					System.out.printf("%-5s\n", number);
+				}
+				else
+					System.out.printf("%-5s", number);
+			}
+
+			// Check whether the next number is prime
+			number++;
+		}
+	}
+
+	/** Check whether number is prime */
+	public static boolean isPrime(int number) {
+		for (int divisor = 2; divisor <= number / 2; divisor++) {
+			if (number % divisor == 0) { // If true, number is not prime
+				return false; // Number is not a prime
+			}
+		}
+
+		return true; // Number is prime
 
 
+	}
 }//closing the class_6_10
