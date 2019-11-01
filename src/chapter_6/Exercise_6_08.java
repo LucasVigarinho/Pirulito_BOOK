@@ -30,31 +30,48 @@ package chapter_6;
  *
  */
 
+
 /** Necessary imports */
 import java.util.Scanner;
-
+import java.text.DecimalFormat;
 /** Creating the class named Exercise_6_08*/
 public class Exercise_6_08{
 
 	/** Creating the main method */
 	public static void main(String[] arg) {
 
-		//create the necessary objects
+		DecimalFormat df1 = new DecimalFormat("##0.0");
+		DecimalFormat df2 = new DecimalFormat("##0.00");
 		
+		System.out.print("\n\tCelsius\tFahrenheit\t\tFahrenheit\tCelsius" );
+		double count = 130;
+		//creating a for loop 
+		for(int i = 40; i > 30; i--) {
+			
+			System.out.print("\n\t" + ((double)i) + "\t" + df1.format(celsiusToFahrenheit((double)(i))) + "\t\t|\t"
+									+ (count-=10) + "\t\t" + df2.format(fahrenheitToCelsius((count))));
+			
+		}//closing for loop
 
-		//print out the message to be the user guide in the interaction
-		
-		//Create a variable to absorb the user insertion
-		
+	}//closing the main method
 
-		//create a variable necessary to count
+	// Convert from feet to meters 
+	public static double celsiusToFahrenheit(double celsius){
 		
+		double fahrenheit = (9.0 / 5) * celsius + 32;
 		
-		//create a for loop in order to test all the letters
-		//closing for loop
+		return fahrenheit;
 		
-		//print out the messages 
+	}//closing the main method
+
+	// Convert from meters to feet 
+	public static double fahrenheitToCelsius(double fahrenheit) {
 		
+		double celsius = (5.0 / 9) * (fahrenheit - 32);
+		
+		return celsius;
+	
+
 	}//closing the main method
 
 
