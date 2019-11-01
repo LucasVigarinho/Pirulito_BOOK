@@ -32,6 +32,7 @@ package chapter_6;
  *
  */
 
+import java.text.DecimalFormat;
 /** Necessary imports */
 import java.util.Scanner;
 
@@ -41,23 +42,39 @@ public class Exercise_6_07{
 	/** Creating the main method */
 	public static void main(String[] arg) {
 
-		//create the necessary objects
+		DecimalFormat df = new DecimalFormat("$####.##");
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("\n\n\tEnter investment amount: ");
+		double amount = input.nextDouble();
+		System.out.print("\n\n\tEnter annual interest rate in percentage: ");
+		double interestRate = input.nextDouble();
+		System.out.print("\n\n\tEnter number of years: ");
+		int years = input.nextInt();
+
+		//print out the annunciate
+		System.out.print("\n\n\tYears\tFuture Value");
+		//crete for loop to print out the values per year
+		for (int i = 1; i <= years; i++) {
+			System.out.print("\n\t" + i + "\t" + df.format(futureInvestmentValue(amount, interestRate, i)));
+		}//closing the for loop
 		
 
-		//print out the message to be the user guide in the interaction
-		
-		//Create a variable to absorb the user insertion
-		
-
-		//create a variable necessary to count
-		
-		
-		//create a for loop in order to test all the letters
-		//closing for loop
-		
-		//print out the messages 
+		input.close();
 		
 	}//closing the main method
 
+	/** Creating the method futureInvestmentValue following the instructions */
+	public static double futureInvestmentValue(double investmentAmount, double monthlyInterestRate, int years) {
+
+		double interestMonth = (monthlyInterestRate/12)/100;
+		double months = years* 12;
+		double accumulated1 = investmentAmount + ((interestMonth * investmentAmount) * months);
+		double accumulated2 = investmentAmount;
+		for(int i = 1; i <= months; i++) {
+			accumulated2 += (interestMonth * accumulated2);
+		}
+		return accumulated2;
+	}//closing the fututureInvestmentValue
 
 }//closing the class_6_07
