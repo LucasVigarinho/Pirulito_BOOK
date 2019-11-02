@@ -71,9 +71,9 @@ public class Exercise_6_11 {
 		DecimalFormat df1 = new DecimalFormat("######.0");
 
 
-		System.out.print("\n\n\tSales Amount/tCommission");
+		System.out.print("\n\n\tSales Amount\tCommission");
 		for (int i = 10000; i <= 100000; i+=5000) {
-			System.out.print("\n\t"+ df0.format(i) + " Total Comission " + df1.format(computeCommission(i)));
+			System.out.print("\n\t"+ df0.format(i) + "\t\t" + df1.format(computeCommission(i)));
 		}
 
 
