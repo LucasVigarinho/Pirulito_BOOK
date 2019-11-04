@@ -43,6 +43,7 @@ public class Exercise_6_12 {
 		//call the method putting inside the user insertions
 		printChars(ch1, ch2, lines);
 
+		input.close();
 	}//closing the main method
 
 	/** Create the method specified on the instructions */
