@@ -31,36 +31,36 @@ public class Exercise_6_21 {
 
 	/** created the main method **/
 	public static void main (String[] args) {
-		
+
 		/** Created the objects needed */
 		Scanner input = new Scanner(System.in);
 		Exercise_6_21 in = new Exercise_6_21();
-		
+
 		/** Print out the message to be a guide for the user interaction */
 		System.out.print("\n\n\tEnter a string: ");
 		/** Created the variable to absorb the user insertion */
 		String uppercaseLetter = input.nextLine();
-		
+
 		System.out.print("\n\n\t");
-		
+
 		/** Created a for loop in order to read all the substrings */
 		for (int i = 0; i < uppercaseLetter.length(); i++) {
-	
+
 			if(Character.isLetter(uppercaseLetter.charAt(i))){
 				System.out.print(in.getNumber(uppercaseLetter.charAt(i)));
 			}else {
 				System.out.print(uppercaseLetter.charAt(i));
 			}
-			
+
 		}//closing the for loop
 		/** closing the object opened  */
 		input.close();
 	}//closing the main method
-	
+
 	/** Method created following the instructions, in order to give an upper case letter */
 	int getNumber(char uppercaseLetter) {
 		if (uppercaseLetter == 'a' || uppercaseLetter == 'b' || uppercaseLetter == 'c' ||
-			uppercaseLetter == 'A' || uppercaseLetter == 'B' || uppercaseLetter == 'C') {
+				uppercaseLetter == 'A' || uppercaseLetter == 'B' || uppercaseLetter == 'C') {
 			return 2;
 		}else if(uppercaseLetter == 'd' || uppercaseLetter == 'e' || uppercaseLetter == 'f' ||
 				uppercaseLetter == 'D' || uppercaseLetter == 'E' || uppercaseLetter == 'F') {
@@ -71,7 +71,6 @@ public class Exercise_6_21 {
 		}else if (uppercaseLetter == 'j' || uppercaseLetter == 'k' || uppercaseLetter == 'l' ||
 				uppercaseLetter == 'J' || uppercaseLetter == 'K' || uppercaseLetter == 'L') {
 			return 5;
-			
 		}else if(uppercaseLetter == 'm' || uppercaseLetter == 'n' || uppercaseLetter == 'o' ||
 				uppercaseLetter == 'M' || uppercaseLetter == 'N' || uppercaseLetter == 'O') {
 			return 6;
@@ -84,7 +83,7 @@ public class Exercise_6_21 {
 		}else {
 			return 9;
 		}
-		 
+
 	}//close get Number method
-	
+
 }//closing the class
