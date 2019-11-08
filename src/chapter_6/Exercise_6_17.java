@@ -38,6 +38,7 @@ public class Exercise_6_17 {
 		int n = input.nextInt();
 		/** Call the printMatrix method */
 		printMatrix(n);
+		input.close();
 	}//closing the main method 
 
 	/** Created the printMatrix method following the instructions */
