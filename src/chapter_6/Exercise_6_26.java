@@ -13,7 +13,56 @@ package chapter_6;
  * @author lucasmaximo
  *
  */
+/** Importing the necessary libraries */
 
+/** Created the class */
 public class Exercise_6_26 {
 
-}
+	/** Created the main method */
+	public static void main (String[] args) {
+
+		int count = 0;
+		for (int i = 0; count < 100; i++) {
+
+			if (isPrime(i) && isPalindrome(i)) {
+				System.out.printf("%10d", i);
+				count++;
+				if (count % 10 == 0 && i != 0) System.out.println();
+			}
+		}//closing a while loop
+	}//closing the main method
+
+	/** Created the method in order to find out if the number is palindorme */
+	public static boolean isPrime(int test) {
+
+		if (test < 2) return false;
+
+		for (int i = 2; i <= test / 2; i++) {
+
+			if (test % i == 0) return false;
+		}
+
+		return true;
+
+
+
+	}//closing isPrime
+
+	public static boolean isPalindrome(int number) {
+
+		String reverse = ""; 
+		// make a conversion of the number to a string
+		String n = number + ""; 
+		// Reverse string
+		for (int i = n.length() - 1; i >= 0; i--) {
+			reverse += n.charAt(i);
+		}
+		int compare = Integer.parseInt(reverse);
+		// give the return to reversed integer
+		return (number == compare) ? true : false; // Return reversed integer
+
+
+	}//closing isPalindrome method
+	/** Created the method in order to find out if the number is a prime */
+
+}//closing the class
