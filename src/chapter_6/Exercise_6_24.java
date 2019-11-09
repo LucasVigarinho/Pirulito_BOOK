@@ -52,6 +52,7 @@ public class Exercise_6_24 {
 
 		Date date3 = java.util.Calendar.getInstance().getTime();  
 		System.out.println(date3);  
+		
 	}//closing the main method
 
 	/** Created a method to produce the day */
