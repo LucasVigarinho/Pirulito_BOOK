@@ -1,7 +1,6 @@
 package chapter_3;
 
 import java.util.Scanner;
-import java.text.DecimalFormat;
 
 /**
  * 
@@ -59,7 +58,6 @@ public class Exercise_3_32 {
 		
 		//creating the objects to absorb the user informations and to print out in a good format
 		Scanner input = new Scanner (System.in);
-		DecimalFormat df = new DecimalFormat("####.0");
 		
 		//Printing out the message to be the user guide
 		System.out.print("\n\n\tEnter three points for p0, p1, and p2: ");

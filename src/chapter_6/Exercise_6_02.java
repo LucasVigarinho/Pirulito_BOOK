@@ -38,7 +38,7 @@ public class Exercise_6_02{
 		
 		//print out the messages 
 		System.out.print("\n\n\t" + sumDigits(number));
-		
+		input.close();
 	}//closing the main method
 
 	/** Method created in order to follow the instructions  */

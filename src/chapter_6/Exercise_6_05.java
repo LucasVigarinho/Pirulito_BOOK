@@ -38,7 +38,7 @@ public class Exercise_6_05{
 		displaySortedNumbers(number1, number2, number3);
 		
 		//print out the messages 
-		
+		input.close();
 	}//closing the main method
 	/** Create a method following the instructions 
 	 * the method print the numbers inserted in a increasing order */

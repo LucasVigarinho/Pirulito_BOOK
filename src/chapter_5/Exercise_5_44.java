@@ -45,6 +45,7 @@ public class Exercise_5_44 {
 		
 		//calculation
 		
+		input.close();
 	}//closing the main method
 
 

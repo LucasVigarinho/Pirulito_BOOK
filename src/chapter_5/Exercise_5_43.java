@@ -42,6 +42,7 @@ public class Exercise_5_43 {
 		}//closing for loop
 		
 		System.out.print("\n\n\tTotal of combinations -> " + count);
+		input.close();
 	}//closing the main method
 
 

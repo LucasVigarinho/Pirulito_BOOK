@@ -38,6 +38,7 @@ public class Exercise_5_46 {
 			System.out.print(user.charAt(i));
 		}//closing for loop
 		
+		input.close();
 	}//closing the main method
 
 

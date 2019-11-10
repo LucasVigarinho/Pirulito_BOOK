@@ -75,6 +75,7 @@ public class Exercise_5_17 {
 			System.out.println();	
 			
 		}//closing the maun for loop
+		input.close();
 	
 	}//closing the main method
 

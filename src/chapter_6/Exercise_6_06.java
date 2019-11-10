@@ -37,6 +37,7 @@ public class Exercise_6_06{
 		//call the method to create the patter
 		displayPattern(number);
 
+		input.close();
 	}//closing the main method
 
 	/** Create the pattern's method following the instructions */

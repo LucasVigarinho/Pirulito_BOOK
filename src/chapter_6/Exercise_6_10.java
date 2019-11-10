@@ -12,7 +12,6 @@ package chapter_6;
  */
 
 /** Necessary imports */
-import java.util.Scanner;
 
 /** Creating the class named Exercise_6_10*/
 public class Exercise_6_10{

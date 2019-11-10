@@ -69,7 +69,6 @@ public class Exercise_6_07{
 
 		double interestMonth = (monthlyInterestRate/12)/100;
 		double months = years* 12;
-		double accumulated1 = investmentAmount + ((interestMonth * investmentAmount) * months);
 		double accumulated2 = investmentAmount;
 		for(int i = 1; i <= months; i++) {
 			accumulated2 += (interestMonth * accumulated2);

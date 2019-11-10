@@ -110,6 +110,7 @@ public class Exercise_5_18 {
 			System.out.print("\n\t");
 		}//closing the main for loop
 
+		input.close();
 	}//closing the main method
 
 

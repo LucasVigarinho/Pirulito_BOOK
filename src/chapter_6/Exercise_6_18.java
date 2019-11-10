@@ -42,7 +42,7 @@ public class Exercise_6_18 {
 			password = input.nextLine();
 		}//close while loop
 
-
+		input.close();
 		System.out.print("\n\tPassword OK!");
 
 	}//close the main method

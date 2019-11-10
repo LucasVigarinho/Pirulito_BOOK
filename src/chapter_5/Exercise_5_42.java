@@ -56,7 +56,7 @@ public class Exercise_5_42 {
 		System.out.print("\n\n\tNecessary sales "+ df0.format( + sales) + " Total Comission " + df0.format(comission1));
 	
 
-
+		input.close();
 		
 	}//closing the main method
 

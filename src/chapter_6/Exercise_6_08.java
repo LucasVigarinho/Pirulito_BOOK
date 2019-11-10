@@ -32,7 +32,6 @@ package chapter_6;
 
 
 /** Necessary imports */
-import java.util.Scanner;
 import java.text.DecimalFormat;
 /** Creating the class named Exercise_6_08*/
 public class Exercise_6_08{

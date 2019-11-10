@@ -42,6 +42,7 @@ public class Exercise_5_16 {
 		}while(number / count  != 1);
 		
 		System.out.println(number + ".");
+		input.close();
 	}//closing the main method
 
 

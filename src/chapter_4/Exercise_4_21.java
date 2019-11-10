@@ -42,6 +42,7 @@ public class Exercise_4_21 {
 			System.out.print("\n\n\t" + ssn + " is an invalid social security number");
 		}
 
+		input.close();
 		//		System.out.print(test ? "\n\n\t" + ssn + " is a valid social security number" : ssn + " is an invalid social security number" );
 
 	}//closing the main method
