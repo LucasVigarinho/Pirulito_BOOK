@@ -27,12 +27,13 @@ public class Exercise_6_26 {
 			if (isPrime(i) && isPalindrome(i)) {
 				System.out.printf("%10d", i);
 				count++;
-				if (count % 10 == 0 && i != 0) System.out.println();
+				if (count % 10 == 0 && i != 0) {
+					System.out.println();
+				}
 			}
 		}//closing a while loop
 	}//closing the main method
-
-	/** Created the method in order to find out if the number is palindorme */
+	/** Created the method in order to find out if the number is a prime */
 	public static boolean isPrime(int test) {
 
 		if (test < 2) return false;
@@ -47,7 +48,8 @@ public class Exercise_6_26 {
 
 
 	}//closing isPrime
-
+	
+	/** Created the method in order to find out if the number is palindorme */
 	public static boolean isPalindrome(int number) {
 
 		String reverse = ""; 
@@ -63,6 +65,5 @@ public class Exercise_6_26 {
 
 
 	}//closing isPalindrome method
-	/** Created the method in order to find out if the number is a prime */
 
 }//closing the class
