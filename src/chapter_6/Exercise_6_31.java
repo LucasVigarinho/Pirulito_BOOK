@@ -81,6 +81,95 @@ package chapter_6;
  * @author lucasmaximo
  *
  */
+
+/** Import the necessary libraries */
+import java.util.Scanner;
+
 public class Exercise_6_31 {
+	
+	/** Created the main method */
+	
+	public static void main(String[] args) {
+	// Initialize the Scanner method creating an new scanner variable called input,
+			// to be used to extract the information inserted
+			Scanner input = new Scanner(System.in); // Create a Scanner
+
+			// Print out to the user to insert a credit card number
+			System.out.print("\n\n\tEnter a credit card number as a long integer: ");
+
+			// Create the variable long called number, to receive the insertion from the
+			// user
+			long number = input.nextLong();
+			System.out.print("\n\t");
+			// Print out the answer if is valid or not, calling the public
+			System.out.print(number + " is " + (toValid(number) ? "valid" : "invalid"));
+			input.close();
+		}
+
+		// Create the public class toValid to validate the numbers, following the
+		// explained rules on the description
+		public static boolean toValid(long number) {
+			// Create the boolean variable to validate the number, calling every class in
+			// oder to test numbers
+			boolean valid = (getSize(number) >= 13 && getSize(number) <= 16)
+					&& (prefixMatched(number, 4) || prefixMatched(number, 5) || prefixMatched(number, 37)
+							|| prefixMatched(number, 6))
+					&& ((sumOfDoubleEvenPlace(number) + sumOfOddPlace(number)) % 10 == 0);
+
+			return valid;
+		}
+
+		// Create the class getSize to return the number of digits in the long integer d
+		public static int getSize(long d) {
+			String num = d + "";
+			return num.length();
+		}
+
+		// Create the class prefixMatched to analyze the prefix, calling it of K, in
+		// order to check if card is valid
+		public static boolean prefixMatched(long number, int d) {
+			return getPrefix(number, getSize(d)) == d;
+		}
+
+		// Create the class getPrefix to validate the first number of the number
+		// inserted by the user
+		public static long getPrefix(long number, int k) {
+			if (getSize(number) > k) {
+				String num = number + "";
+				return Long.parseLong(num.substring(0, k));
+			}
+			return number;
+		}
+
+		// Create the class sumOfDoubleEvenPlace in order to make every second number
+		// multiplied by two and summarize them
+		public static int sumOfDoubleEvenPlace(long number) {
+			int sum = 0;
+			String num = number + "";
+			for (int i = getSize(number) - 2; i >= 0; i -= 2) {
+				sum += getDigit(Integer.parseInt(num.charAt(i) + "") * 2);
+			}
+			return sum;
+		}
+
+		// Create the class getDigit to validate the exceptions of number multiplied by
+		// two bigger the 9, summarizing the two digits
+		public static int getDigit(int number) {
+			if (number < 9)
+				return number;
+			else
+				return number / 10 + number % 10;
+		}
+
+		// Create the class sumOfOddPlace in order to summarize every number allocated
+		// in an odd position
+		public static int sumOfOddPlace(long number) {
+			int sum = 0;
+			String num = number + "";
+			for (int i = getSize(number) - 1; i >= 0; i -= 2) {
+				sum += Integer.parseInt(num.charAt(i) + "");
+			}
+			return sum;
+		}
 
 }
