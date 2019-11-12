@@ -49,7 +49,7 @@ public class Exercise_3_21{
 	public Exercise_3_21() {
 		
 	}//close constructor
-
+ 
 	/** Automatic generated main method */
 	public static void main(String[] args) {
 

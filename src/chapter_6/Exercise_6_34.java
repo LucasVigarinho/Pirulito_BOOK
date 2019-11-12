@@ -10,6 +10,8 @@ package chapter_6;
  * @author lucasmaximo
  *
  */
+
 public class Exercise_6_34 {
 
+	
 }
