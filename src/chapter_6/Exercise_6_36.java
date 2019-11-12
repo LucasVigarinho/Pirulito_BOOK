@@ -24,6 +24,42 @@ package chapter_6;
  * @author lucasmaximo
  *
  */
+
+/** Importing the necessary libraries */
+import java.util.Scanner;
+
+/** Created the exercise_6_36 class */
 public class Exercise_6_36 {
 
-}
+	/** Created the main method */
+	public static void main(String [] args) {
+		
+		/** Created the objects needed */
+		Scanner input = new Scanner(System.in);
+		
+		/** Print out the message to be the user guide interaction - sides */
+		System.out.print("\n\n\tEnter the number of sides: ");
+		
+		/** Created the variables to absorb the user interaction - sides */
+		double sides = input.nextDouble();
+	
+		/** Print out the message to be the user guide interaction - side */
+		System.out.print("\n\n\tEnter the side: ");
+		
+		/** Created the variables to absorb the user interaction - side */
+		double side = input.nextDouble();
+		
+		/** Calling the method */
+		System.out.print("\n\n\tThe area of the pentagon is " + area(sides, side));
+		
+	}//closing main method
+	
+	/** Created the method following the instructions */
+	public static double area(double sides, double side) {
+		
+		 double area = (sides * Math.pow(side, 2) ) / (4 * Math.tan(Math.PI/sides));
+		 
+		 return area;
+	}//closing the method area of the pentagon
+	
+}//closing the class
