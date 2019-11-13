@@ -38,7 +38,7 @@ public class Exercise_6_10{
 					System.out.printf("%-5s\n", number);
 				}
 				else
-					System.out.printf("%-5s", number);
+					System.out.printf("%-5s", number); 
 			}
 
 			// Check whether the next number is prime
