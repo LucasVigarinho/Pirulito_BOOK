@@ -49,3 +49,4 @@ public class Exercise_6_01{
 	}//closing method getPentagonal
 
 }//closing the class_6_01
+
