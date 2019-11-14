@@ -85,7 +85,7 @@ public class Exercise_5_29 {
 				}else{
 					daysMonth = 28;
 				}//closing if statement
-			
+			 
 			//printing out the message communicating in which week day is the day first of this month
 			System.out.print("\n\t" + "February \t" + year + " day 1st on \t" + weekDay(weekDay1));
 		
