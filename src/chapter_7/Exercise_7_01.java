@@ -49,37 +49,35 @@ public class Exercise_7_01{
 		double best = 0;
 		int studentsN = input.nextInt();
 		double [] students = new double [studentsN];
-		
+
 		/** Print out the message to be a guide of the user interaction */
 		System.out.print("\n\n\tEnter " + studentsN + " scores: ");
 		//create a while loop in order to absorb all the students scores
 		for(int l = 0; l < studentsN; l++) {
 			students[l] = input.nextDouble();
-			
+
 			if(best < students[l]){
 				best = students[l];
-				
+
 			}else {
-				
+
 			}
-				
-			
 
 		}//closing while loop
-		
+
 		/** Print the students scores */
 		for(int j = 0; j < studentsN; j++) {
-			
+
 			//print out the messages 
 			System.out.print("\n\n\tStudent " + j + " score is " + students[j] + " and grade is " + grade(students[j], best));
 		}//close for loop
-		
-	
+
+		input.close();
 	}//closing the main method
 
 	/** Created the method in order to classificate the mark */
 	public static char grade(double grade, double best) {
-		
+
 		char result = 'A';
 		if(grade >= best - 10) {
 			result = 'A';
@@ -92,7 +90,7 @@ public class Exercise_7_01{
 		}else {
 			result = 'F';
 		}
-			
+
 		return result;
 	}//clsoing the method
 
