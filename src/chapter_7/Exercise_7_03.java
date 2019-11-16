@@ -22,7 +22,7 @@ package chapter_7;
  */
 
 /** Necessary imports */
-import java.text.DecimalFormat;
+
 import java.util.Scanner;
 
 
@@ -33,7 +33,7 @@ public class Exercise_7_03{
 	public static void main(String[] arg) {
 		//create the necessary objects
 		Scanner input = new Scanner (System.in);
-		DecimalFormat df = new DecimalFormat("####");
+
 
 		/** Print out the message to be a guide of the user interaction */
 		System.out.print("\n\n\tEnter the integers between 1 and 100: ");
