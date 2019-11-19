@@ -37,38 +37,38 @@ public class Exercise_7_09{
 
 		//created the necessary variables
 		double [] numbers = new double[10];
-		
+
 		//printed out the message to guide the user interaction
 		System.out.print("\n\n\tInsert 10 numbers -> ");
-		
+
 		//created a for loop in order to absorb all the user insertions 
 		for (int count = 0; count < 10; count++) {
 			numbers[count] = input.nextDouble();
-			
+
 		}//closing for loop
-	
+
 		//print out the average number using the second method
 		System.out.printf("\n\n\tThe minimum number is -> " + df.format(min(numbers)));
-	
 
+		input.close();
 	}//closing the main method
 
 
 	/** Created the  method following the instructions - in order to find the minimum value */
 	public static double min(double[] array) {
 		double numb = array[0];
-		
+
 		for (int i = 0; i < array.length; i++) {
 			if(numb > array[i] && numb != 0) {
 				numb = array[i];
 			}
-			
+
 		}//closing for loop
-		
+
 		return numb;
-		
-	}//closing the first method
-	
-	
+
+	}//closing the  method
+
+
 
 }//closing the class_7_09
