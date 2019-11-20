@@ -44,6 +44,7 @@ public class Exercise_7_08{
 		//print out the average number using the second method
 		System.out.print("\n\n\tAverage number -> " + average(numbers));
 	
+		input.close();
 
 	}//closing the main method
 
