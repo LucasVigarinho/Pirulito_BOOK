@@ -47,6 +47,7 @@ public class Exercise_7_14{
 		//print out the messages 
 		Exercise_7_05.printOutArray(argument);
 		System.out.print("\n\n\tThe Random number is -> "+ number);
+		input.close();
 	
 	}//closing the main method
 
