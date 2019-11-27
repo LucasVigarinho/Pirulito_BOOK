@@ -14,7 +14,7 @@ package chapter_7;
 
 
 /** Necessary imports */
-import java.text.DecimalFormat;
+
 import java.util.Scanner;
 
 
@@ -24,12 +24,9 @@ public class Exercise_7_12{
 	public static void main(String[] args) {
 		//create the necessary objects
 		Scanner input = new Scanner (System.in);
-		DecimalFormat df2 = new DecimalFormat("####.00");
-		DecimalFormat df5 = new DecimalFormat("####.00000");
 
 		//creating the necessary variables
 		double [] numbers = new double [10];
-		double summ = 0;
 		int quantNumb = 0;
 
 
@@ -40,7 +37,6 @@ public class Exercise_7_12{
 		//creating an while loop in order to populate the array 
 		while(quantNumb < 10) {
 			numbers[quantNumb] = input.nextDouble();
-			summ += numbers[quantNumb];
 			quantNumb +=1;
 
 		}//closing the while loop
