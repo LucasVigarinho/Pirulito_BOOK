@@ -34,41 +34,41 @@ public class Exercise_7_19{
 	public static void main(String[] arg) {
 
 		//create the necessary objects
-				Scanner input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 
 
-				
-				//printed out the message to guide the user interaction
-				System.out.print("\n\n\tEnter list: -> ");
-				
-				//created the necessary variables Array and the first variable 
-				//to absorb the first number to define the array size
-				int size = input.nextInt();
-				int [] list = new int[size+1];
-				list[0] = size;
-				
-				//created a for loop in order to absorb all the user insertions 
-				for (int i = 1; i < size+1; i++) {
-					list[i] = input.nextInt();
-					
-				}//closing for loop
-			
-				//organize the array uzing the bubble sort
-				System.out.print("\n\n\tThe list is " + ((isSorted(list))?"already sorted":"not sorted"));
-				
-				
-			
-				input.close();
 
-				
-		
-	
+		//printed out the message to guide the user interaction
+		System.out.print("\n\n\tEnter list: -> ");
+
+		//created the necessary variables Array and the first variable 
+		//to absorb the first number to define the array size
+		int size = input.nextInt();
+		int [] list = new int[size+1];
+		list[0] = size;
+
+		//created a for loop in order to absorb all the user insertions 
+		for (int i = 1; i < size+1; i++) {
+			list[i] = input.nextInt();
+
+		}//closing for loop
+
+		//organize the array uzing the bubble sort
+		System.out.print("\n\n\tThe list is " + ((isSorted(list))?"already sorted":"not sorted"));
+
+
+
+		input.close();
+
+
+
+
 	}//closing the main method
 
 	//method that returns true if the list is already sorted in increasing order.
 	public static boolean isSorted(int[] list) {
 		boolean test = true;
-		
+
 		//created a for loop in order to check all the positions
 		for(int i = 1; i < list.length-1; i++) {
 			if(list[i] <= list[i+1]) {
@@ -77,7 +77,7 @@ public class Exercise_7_19{
 				return false;
 			}
 		}//closing for loop
-		
+
 		return test;
 	}//closing method
 
