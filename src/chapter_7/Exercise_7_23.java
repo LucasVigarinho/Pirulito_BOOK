@@ -1,7 +1,7 @@
 package chapter_7;
 /** 
  * 
- * 		Game: locker puzzle) A school has 100 lockers and 100 students. All lockers are
+ * 		(Game: locker puzzle) A school has 100 lockers and 100 students. All lockers are
  * 		closed on the first day of school. As the students enter, the first student, denoted
  * 		S1, opens every locker. Then the second student, S2, begins with the second
  * 		locker, denoted L2, and closes every other locker. Student S3 begins with the

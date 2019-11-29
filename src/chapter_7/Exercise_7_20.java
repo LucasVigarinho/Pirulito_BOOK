@@ -32,10 +32,7 @@ public class Exercise_7_20{
 
 				//created the necessary variables Array and the first variable 
 				//to absorb the first number to define the array size
-			
 				int [] list = new int[10];
-				
-
 				//created a for loop in order to absorb all the user insertions 
 				for (int i = 0; i < list.length; i++) {
 					list[i] = input.nextInt();
@@ -44,12 +41,7 @@ public class Exercise_7_20{
 
 				Exercise_7_05.printOutArray(selectionSort(list));
 				
-
-
 				input.close();
-
-
-		
 	
 	}//closing the main method
 
