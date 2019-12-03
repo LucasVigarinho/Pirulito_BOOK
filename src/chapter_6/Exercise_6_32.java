@@ -60,7 +60,8 @@ public class Exercise_6_32 {
 		System.out.print("\n\n\t");
 		double total = 10000.0;
 		/** Created the necessary variables to manipulate inside the loops and to absorb the count record and calculate after all */
-		int sum = 0, dice1 = 0, dice2 = 0, wins = 0; 
+		int sum = 0, dice1 = 0, dice2 = 0;
+		int wins = 0;
 		
 		
 		//created the for loop in order to run the game 10000 times
