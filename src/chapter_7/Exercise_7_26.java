@@ -49,7 +49,7 @@ public class Exercise_7_26{
 		}//closing for loop
 
 		//Print out a message to be the guide for the user.
-		System.out.print("\n\n\tEnter list1: ");
+		System.out.print("\n\n\tEnter list2: ");
 		//Created the variables that are going to be used, including the arrays 
 		int size2 = input.nextInt();
 		int [] list2 = new int [size2+1];
