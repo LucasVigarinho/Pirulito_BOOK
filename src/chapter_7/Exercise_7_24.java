@@ -202,7 +202,7 @@ public class Exercise_7_24{
 	}//closing print result 
 
 	/** Created a method in order to fill the Deck of Cards - Array */
-	public static void fillDeck(String deckOfCards []) {
+	public static String [] fillDeck(String deckOfCards []) {
 		int index = 0;
 		/** Created a main for loop in order to run all the suits */
 		for(int a = 0; a < 4; a++) {
@@ -215,7 +215,8 @@ public class Exercise_7_24{
 				index++;
 			}//closing nested for loop (RANKS)
 		}//closing main for loop (SUITS)
-
+		
+		return deckOfCards;
 	}//closing fillDeck of cards
 
 	/** Created with test objective, print all the positions of the array */
