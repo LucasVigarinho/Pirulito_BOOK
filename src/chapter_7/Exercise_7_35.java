@@ -63,14 +63,14 @@ public class Exercise_7_35{
 				/** calling new game with the randomly number choice */
 				category = r.nextInt(5);
 			System.out.print("\n\n\t************** STARTING A NEW GAME **************");
-				newGame(category);
-			
-				break;
+			newGame(category);
+
+			break;
 			case(2):
 				break;
 			case(3):
 				System.err.print("\n\n\t\t\tTHE END");
-				break;
+			break;
 			default:
 				System.out.print("wrong choice");
 
@@ -78,43 +78,137 @@ public class Exercise_7_35{
 
 
 		}while(option != 3);
+		input.close();
+
 	}//closing start Hang Man method
 
 	/** Created a method to start a new game following the category chosen */
 	public static void newGame(int category ) {
-	
+
+		/** Create the necessary object */
+		Scanner input = new Scanner (System.in);
+
 		/** Created the necessary variable array word to absorb the answer of the method categoryGame */
 		String [] wordCategory = categoryGame(category);
 		String word = wordCategory[((int) (Math.random()*5+1))];
-		
+		char [] wordArray = word.toCharArray();
+		String letter = "";
+		boolean isNotFull = true;
+		char [] newWord = new char[wordArray.length];
+		int bodyPart = 0;
+
 		/** Printing out the message to the user understand which category and how many characters has this word */
 		System.out.print("\n\n\tThe category is -> " + wordCategory[0]);
-		
+
 		System.out.print("\n\tThe word has -> " + word.length() + " characteres\n\t\t\t\t\t");
-		
+
 		/** Created a for loop to show to the user how many characters has the word */
 		for(int a = 0; a < word.length(); a++) {
-			System.out.print("___" + " ");
+			if(word.charAt(a) == 32) {
+				System.out.print("   " + " ");
+			}else {
+				System.out.print("___" + " ");
+			}
 		}//closing the word for loop
-		
-		//printed a space for a visual motives 
-		System.out.print("\n\nPlease, choose one letter -> ");
-		
+
+
+		hangTheMan(bodyPart);
+
+		do {
+			//printed a space for a visual motives 
+			System.out.print("\n\n\tPlease, choose one letter -> ");
+
+			//absorb the user message
+			letter = input.nextLine();
+			int position = isInTheWord(letter, word);
+
+			/** Created an if statement in order to change the letter inside of the string by an space or print the incorrect mode */
+			if( position >= 0 ) {
+
+				newWord[position] = letter.charAt(0);
+
+				System.out.print("\n\n\t\t\t\t\t");
+
+				/** Created a for loop to show to the user how many characters has the word */
+				for(int a = 0; a < word.length(); a++) {
+					if(wordArray[a] == 32) {
+						System.out.print("   " + " ");
+					}else if(wordArray[a] == newWord[a]){
+						System.out.print(" "+ newWord[a] + " " + " ");
+					}else {
+						System.out.print("___" + " ");
+					}
+				}//closing the word for loop
+
+				hangTheMan(bodyPart);
+
+			}else{
+				bodyPart++;
+				hangTheMan(bodyPart);
+
+			}//closing the if statement 
+
+			if(bodyPart == 6) {
+			
+				isNotFull = false;
+			}else if(isFull(newWord, wordArray)) {
+			
+				isNotFull = false;
+			}
+			
+		}while(isNotFull);
+
+		if(bodyPart == 6) {
+			System.err.print("\n\n\t\t\t\t\tYOU LOOSE");
+			
+		}else if(isFull(newWord, wordArray)) {
+			System.err.print("\n\n\t\t\t\t\tYOU WON");
+			
+		}
 		//Creates an array in order to absorb errors letters and compare with the right word
 		//creates an array for the right letter created 
 		//creates a method in order to test the word in all loop
 		//creates a do loop in order to give to the user an opportunity to try letters
 		//creates a visual print of error and visual print for right, using the method created for be tested if
-		
+
 	}//closing the new Game method
+
+	/** Created a method which give the answer of the isNotFull back */
+	public static boolean isFull(char[] newWord, char [] wordArray) {
+		
+		for(int j = 0; j < newWord.length; j++  ) {
+			if(newWord[j] != wordArray[j]) {
+				return false;
+			}
+		}
+		return true;
+	}//closing isFull method
 	
+	/** Created a boolean method in order to verify if the letter is part of the word */
+	public static int isInTheWord(String letter, String word) {
+
+		int position = 0;
+
+		char l = letter.charAt(0);
+		/** Created a for loop to verify if the letter is in the word */
+		for(int f = 0; f < word.length(); f++) {
+			if(l == word.charAt(f)) {
+				return f;
+			}else {
+
+			}
+		}
+		return -1;
+
+	}//closing method which verifies if the letter is in the word
+
 	/** Created a method category game in order to absorb from a external txt file, the possible categories and words to play */
 	public static String [] categoryGame(int category) {
-	
+
 		/** Created the necessary variable in order to absorb all the external txt file document information and generates a multidimensional array */
 		String [][] categories = new String [5][10];
 		String [] myArray = new String [10];
-		
+
 		//FIRST category description
 		categories[0][0] = "Importat thing for a car";
 		categories[0][1] = "wheels";//word 1
@@ -138,7 +232,7 @@ public class Exercise_7_35{
 		categories[1][7] = "internet";//word 7
 		categories[1][8] = "television";//word 8
 		categories[1][9] = "windows";//word 9
-		
+
 		//THIRD category description
 		categories[2][0] = "Name of a clothes";
 		categories[2][1] = "jumper";//word 1
@@ -150,7 +244,7 @@ public class Exercise_7_35{
 		categories[2][7] = "shirt";//word 7
 		categories[2][8] = "shoes";//word 8
 		categories[2][9] = "underwear";//word 9
-		
+
 		//FORTH category description
 		categories[3][0] = "Name of a furniture";
 		categories[3][1] = "sofa";//word 1
@@ -162,7 +256,7 @@ public class Exercise_7_35{
 		categories[3][7] = "bed";//word 7
 		categories[3][8] = "wardraw";//word 8
 		categories[3][9] = "drawer";//word 9
-		
+
 		//FIFTH category description
 		categories[4][0] = "Name of an acomputer app";
 		categories[4][1] = "docker";//word 1
@@ -174,59 +268,74 @@ public class Exercise_7_35{
 		categories[4][7] = "ilustrator";//word 7
 		categories[4][8] = "corel draw";//word 8
 		categories[4][9] = "postman";//word 9
-		
+
 		//created a for loop in order to populate an array with the category chosen
 		for(int b = 0; b < 10; b++) {
-			
+
 			myArray [b] = categories[category][b];
 		}//closing for loop
-		
+
 		return myArray;
 	}//closing category Game method
-	
+
 	/** Created a method to hang the man until the actual situation */
 	public static void hangTheMan(int bodyPart) {
 		int special = 92;
 
-		System.out.print("\n\n ||_________");
-		System.out.print("\n |---------|");
 
 
 		switch(bodyPart) {
+		case(0):
+			System.out.print("\n\n\t ||_________");
+			System.out.print("\n\t |---------|");
+		break;
 		case (1):
-			System.out.print("\n\t   O");
+			System.out.print("\n\n\t ||_________");
+			System.out.print("\n\t |---------|");
+			System.out.print("\n\t\t   O");
+			System.out.print("\n\n\n");
 		break;
 		case (2):
-			System.out.print("\n\t   O");
-		System.out.print("\n\t   |");
-		System.out.print("\n\t   | " );
+			System.out.print("\n\n\t ||_________");
+			System.out.print("\n\t |---------|");
+			System.out.print("\n\t\t   O");
+			System.out.print("\n\t\t   |");
+			System.out.print("\n\t\t   | " );
+			System.out.print("\n\n");
 		break;
 		case (3):
-			System.out.print("\n\t   O");
-		System.out.print("\n\t  /|"  );
-		System.out.print("\n\t / | " );
+			System.out.print("\n\n\t ||_________");
+			System.out.print("\n\t |---------|");
+			System.out.print("\n\t\t   O");
+			System.out.print("\n\t\t  /|"  );
+			System.out.print("\n\t\t / | " );
+			System.out.print("\n\n");
 		break;
 		case (4):
-			System.out.print("\n\t   O");
-		System.out.print("\n\t  /|"  + String.valueOf( (char) special) );
-		System.out.print("\n\t / | " + String.valueOf( (char) special));
-
-
+			System.out.print("\n\n\t ||_________");
+			System.out.print("\n\t |---------|");
+			System.out.print("\n\t\t   O");
+			System.out.print("\n\t\t  /|"  + String.valueOf( (char) special) );
+			System.out.print("\n\t\t / | " + String.valueOf( (char) special));
 		break;
 		case (5):
-			System.out.print("\n\t   O");
-		System.out.print("\n\t  /|"  + String.valueOf( (char) special) );
-		System.out.print("\n\t / | " + String.valueOf( (char) special));
-		System.out.print("\n\t  / ");
-		System.out.print("\n\t /   " );
+			System.out.print("\n\n\t ||_________");
+			System.out.print("\n\t |---------|");
+			System.out.print("\n\t\t   O");
+			System.out.print("\n\t\t  /|"  + String.valueOf( (char) special) );
+			System.out.print("\n\t\t / | " + String.valueOf( (char) special));
+			System.out.print("\n\t\t  / ");
+			System.out.print("\n\t\t /   " );
 
 		break;
 		case (6):
-			System.out.print("\n\t   O");
-		System.out.print("\n\t  /|"  + String.valueOf( (char) special) );
-		System.out.print("\n\t / | " + String.valueOf( (char) special));
-		System.out.print("\n\t  / " + String.valueOf( (char) special) );
-		System.out.print("\n\t /   " + String.valueOf( (char) special) );
+			System.out.print("\n\n\t ||_________");
+			System.out.print("\n\t |---------|");
+			System.out.print("\n\t\t   O");
+			System.out.print("\n\t\t  /|"  + String.valueOf( (char) special) );
+			System.out.print("\n\t\t / | " + String.valueOf( (char) special));
+			System.out.print("\n\t\t  / " + String.valueOf( (char) special) );
+			System.out.print("\n\t\t /   " + String.valueOf( (char) special) );
 
 		break;
 		default:
