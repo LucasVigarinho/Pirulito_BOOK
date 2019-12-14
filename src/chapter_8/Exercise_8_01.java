@@ -11,9 +11,13 @@ package chapter_8;
  * 		column. Here is a sample run:
  * 
  * 		Enter a 3-by-4 matrix row by row:
- * 		1.5 2 3 4
- * 		5.5 6 7 8
- * 		9.5 1 3 1
+ * 											_________________
+ * 											|1.5 | 2 | 3 | 4 |
+ * 											|5.5 | 6 | 7 | 8 |
+ * 											|9.5 | 1 | 3 | 1 |
+ * 											------------------
+ * 											16.5   9   13  13
+ * 		
  * 		Sum of the elements at column 0 is 16.5
  * 		Sum of the elements at column 1 is 9.0
  * 		Sum of the elements at column 2 is 13.0
@@ -24,7 +28,7 @@ package chapter_8;
  */
 
 /** Necessary imports */
-import java.util.Scanner;
+
 
 /** Creating the class named Exercise_8_01 */
 public class Exercise_8_01{
@@ -32,52 +36,44 @@ public class Exercise_8_01{
 	/** Creating the main method */
 	public static void main(String[] arg) {
 
-		//create the necessary objects
-		Scanner input = new Scanner (System.in);
+		//create the necessary variable
+		double [][] matrix = new double [3][4];
+
+		matrix [0][0] = 1.5;
+		matrix [0][1] = 2;
+		matrix [0][2] = 3;
+		matrix [0][3] = 4;
+		matrix [1][0] = 5.5;
+		matrix [1][1] = 6;
+		matrix [1][2] = 7;
+		matrix [1][3] = 8;
+		matrix [2][0] = 9.5;
+		matrix [2][1] = 1;
+		matrix [2][2] = 3;
+		matrix [2][3] = 1;
 
 
 
-		System.out.print(solution("apple", "aear"));
-		input.close();
+		System.out.println(sumColumn(matrix, 0));
+		System.out.println(sumColumn(matrix, 1));
+		System.out.println(sumColumn(matrix, 2));
+		System.out.println(sumColumn(matrix, 3));
+
+
 	}//closing the main method
 
+	/** Created a method following the initials instructions, in order to sum all the values of the columns */
+	public static double sumColumn(double[][] m, int columnIndex) {
 
-	
-
-
-
-	public static int solution(String A, String B) {
-		char cA = A.charAt(0);
-		char cB = B.charAt(0);
-		int count = 0;
-		char [] repet = new char [A.length() + B.length()];
-
-		for(int a = 0; a < A.length(); a++){
-
-			for(int b = 0; b < B.length();b++) {
-
-				if(A.charAt(a) == B.charAt(b)){
-					count++;
-				}else{
-
-				}
-			}
-			if(count == 0) {
-				repet[a] = A.charAt(a);
-			}else if (count > 1) {
-				repet[a] = A.charAt(a);
-			}
-			count = 0;
-		}
+		//created the necessary variable to sum the numbers
+		double result = 0;
 		
-		for (int c = 0; c < repet.length; c++) {
-			if(repet[c] > 0) {
-				count++;
-			}
+		/** Created a for loop in order to sum all the rows from the specific column */
+		for(int b = 0; b < 3; b++) {
+			result += m[b][columnIndex];
 		}
-		return count;
-	}
 
-
+		return result;
+	}//closing the sumColumn method
 }//closing the class_8_01
 
