@@ -11,10 +11,12 @@ package chapter_8;
  * 		elements on the major diagonal. Here is a sample run:
  * 		
  * 		Enter a 4-by-4 matrix row by row:
- * 		1 2 3 4.0
- * 		5 6.5 7 8
- * 		9 10 11 12
- * 		13 14 15 16
+ * 											1 	2 	3 	4.0 ----    
+ * 											5 	6.5 7 	8
+ * 											9 	10 	11 	12
+ * 											13 	14 	15 	16
+ * 
+ * 			test numbers 1 	2 	3 	4.0 5 	6.5 7 	8 9 	10 	11 	12 13 	14 	15 	16
  * 		Sum of the elements in the major diagonal is 34.5
  * 
  * @author lucasmaximo
@@ -30,56 +32,41 @@ public class Exercise_8_02{
 	/** Creating the main method */
 	public static void main(String[] arg) {
 
-		//create the necessary objects
-		Scanner input = new Scanner (System.in);
+		Scanner input = new Scanner(System.in);
+		double [][] matrix = new double [4][4];
+		System.out.println("Enter a 4-by-4 matrix: ");
+
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[0].length; j++) {
+				matrix[i][j] = input.nextDouble();
+			}
+		}
+		//create the necessary variable
+		
 
 		
-		
-		System.out.print(solution (268));
+
+
+
+		System.out.println(sumMajorDiagonal(matrix));
+
 		input.close();
+
 	}//closing the main method
 
+	/** Created a method following the initials instructions, in order to sum all the values of the major diagonal */
+	public static double sumMajorDiagonal(double[][] m) {
 
-	public static int solution(int N){
-		boolean isNegative = false;
+		//created the necessary variable to sum the numbers
+		double result = 0;
 
-		if (N < 0){
-			isNegative = true;
-			N = N * (-1);
+		/** Created a for loop in order to sum all the rows from the specific column */
+		for(int b = 0; b < m.length; b++) {
+			result += m[b][b];
 		}
 
-		int[] intTab = String.valueOf(N).chars().map(Character::getNumericValue).toArray();
-		int[] newNumber = new int[intTab.length + 1];
-
-		if (isNegative){
-			newNumber[0] = 5;
-			for (int i = 0; i < intTab.length; i++){
-				newNumber[i + 1] = intTab[i];
-			}
-		}else{
-			for (int i = 0; i < intTab.length; i++){
-				if (5 > intTab[i]){
-					newNumber[i] = 5;
-
-					for (int j = i; j < intTab.length; j++){
-						newNumber[j + 1] = intTab[j];
-					}
-					break;
-				}else{
-					newNumber[i] = intTab[i];
-				}
-			}
-		}
-
-		StringBuffer sb = new StringBuffer();
-		for (int i = 0; i < newNumber.length; i++){
-			sb.append(newNumber[i]);
-		}
-		
-		int retorno = Integer.parseInt(sb.toString());
-		return isNegative ? (retorno * (-1)) : retorno;
-	}
-        
+		return result;
+	}//closing the sumColumn method
 
 }//closing the class_8_02
 
