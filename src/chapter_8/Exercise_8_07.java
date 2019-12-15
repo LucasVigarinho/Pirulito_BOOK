@@ -73,7 +73,15 @@ public class Exercise_8_07{
 		input.close();
 
 		// Display result
-		System.out.println("The closest two points are " + "(" + points[p1][0] + ", " + points[p1][1] + ") and (" +points[p2][0] + ", " + points[p2][1] + ")");
+		for (int i = 0; i < points.length; i++) {
+			for (int j = 0; j < points.length; j++) {
+				if (distance(points[i][0], points[i][1],points[j][0], points[j][1],points[i][2], points[j][2] ) == shortestDistance)
+					System.out.println("The closest two points are " +
+							"(" + points[i][0] + ", " + points[i][1] + ") and (" +
+							points[j][0] + ", " + points[j][1] + ")");
+			}
+		}
+		System.out.println("Ther distance is " + shortestDistance);
 		
 	}//closing the main method
 
