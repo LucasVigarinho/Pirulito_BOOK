@@ -44,9 +44,6 @@ public class Exercise_8_02{
 		//create the necessary variable
 		
 
-		
-
-
 
 		System.out.println(sumMajorDiagonal(matrix));
 
