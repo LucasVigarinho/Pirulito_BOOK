@@ -52,7 +52,7 @@ public class Exercise_8_11{
 		int[][] m = new int[3][3];
 
 		//print out the number guide to the user interaction possibility
-		System.out.print("Enter a number between 0 and 511: ");
+		System.out.print("\n\tEnter a number between 0 and 511: ");
 
 		//created a variable in order to absorb the user insertion
 		int n = input.nextInt();
