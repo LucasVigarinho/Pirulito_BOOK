@@ -36,6 +36,32 @@ public class Exercise_8_13{
 
 		//create the necessary objects
 		Scanner input = new Scanner (System.in);
+		
+		//printing out the message in order to guide the user during its interaction
+		System.out.print("\n\n\tEnter the number of rows and columns of the array: ");
+		//created the variable to absorb the insertion of the user row and column
+		double [][] myArray = new double [input.nextInt()][input.nextInt()];
+		
+		//print out the message in order to let the user know the moment to insert the numbers telling the quantity necessary to be inserted
+		System.out.print("\n\tEnter the array ( " + (myArray.length * myArray[0].length )+ " numbers ) :");
+				
+		//created the necessary variable array with only 2 positions, in order to verify each number is the biggest and the position
+		int [] position = new int [2];
+		double lastBigger = 0;
+		
+		//created a for loop in order to absorb all the numbers imputed by the user and fill it in the array positions
+		for(int a = 0; a < myArray.length; a++) {
+			for (int b = 0; b < myArray[a].length; b++) {
+				myArray[a][b] = input.nextDouble();
+				if(myArray[a][b] > lastBigger ) {
+					lastBigger = myArray[a][b];
+					position[0] = a;
+					position[1] = b;
+				}
+			}
+		}
+		//print out the position of the biggest number in the array
+		System.out.print("\n\n\tThe location of the largest element is at (" + position[0] + " ," + position[1] + ")");
 
 		input.close();
 	}//closing the main method
