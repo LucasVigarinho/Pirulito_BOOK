@@ -92,10 +92,10 @@ public class Exercise_8_19{
 				}
 
 				//testing the columns repeated numbers
-				if(values[c][d] == lastNColumn) {
+				if(values[d][c] == lastNColumn) {
 					countColumn1++;
 				}else {
-					lastNColumn = values[c][d];
+					lastNColumn = values[d][c];
 					countColumn1 = 1;
 				}
 
