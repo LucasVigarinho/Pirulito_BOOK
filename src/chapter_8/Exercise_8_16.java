@@ -70,7 +70,7 @@ public class Exercise_8_16{
 					index = i;
 				}//closing if statement
 			}//closing nested for loop
-			
+
 			//if the index of the row is different them the row it self, change positions values
 			if (index != row){
 				matrix[index][0] = matrix[row][0];
@@ -81,7 +81,7 @@ public class Exercise_8_16{
 		}//closing main for loop
 	}//closing sort method
 
-
+	/** Created a method in order to print the matrix multidimensional */
 	public static void print(int [][]matrix) {
 		System.out.print("\n\n\t");
 		// Display sorted array

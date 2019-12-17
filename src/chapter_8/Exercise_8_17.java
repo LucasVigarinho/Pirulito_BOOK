@@ -24,13 +24,14 @@ package chapter_8;
  * 		is the borrower’s ID and the second is the amount borrowed. For example, the
  * 		input for the five banks in Figure 8.8 is as follows (note that the limit is 201):
  * 
- * 		5 201
- * 		25 2 1 100.5 4 320.5
- * 		125 2 2 40 3 85
- * 		175 2 0 125 3 75
- * 		75 1 0 125
- * 		181 1 2 125
+ * 		nBanks = 5 assetLimit = 201
+ * 		bank0 -> balance = 25 	banksLoaned = 2 bankId = 1 amount = 100.5 	bankId = 4 	amount = 320.5
+ * 		bank1 -> balance = 125 	banksLoaned = 2 bankId = 2 amount = 40 		bankId = 3 	amount = 85
+ * 		bank2 -> balance = 175 	banksLoaned = 2 bankId = 0 amount = 125 	banlId = 3 	amount = 75
+ * 		bank3 -> balance = 75 	banksLoaned = 1 bankId = 0 amount = 125
+ * 		bank4 -> balance = 181 	banksLoaned = 1 bankId = 2 amount = 125
  * 
+ *  
  * 		The total assets of bank 3 are (75 + 125), which is under 201, so bank 3 is
  * 		unsafe. After bank 3 becomes unsafe, the total assets of bank 1 fall below
  * 		(125 + 40). Thus, bank 1 is also unsafe. The output of the program should be
