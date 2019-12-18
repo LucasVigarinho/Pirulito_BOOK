@@ -122,7 +122,7 @@ public class Exercise_8_22{
 		}//closing main for loop
 
 		return true;
-	}//closing test matrix method called isConsecutive four
+	}//closing test matrix method called evenNumbers 1s
 
 
 }//closing the class_8_01
