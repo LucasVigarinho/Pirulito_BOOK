@@ -15,10 +15,31 @@ package chapter_8;
  * 		Exercise 3.25 for a sample run.
  * 		
  * 		
+ * 			   (x2,y2)		
+ * 			     /		  (x2,y2)				(x2,y2)		(x3,y3)
+ *  (x3,y3)     /            /                     /		   /
+ * 		\      /            /\                    /			  /	
+ * 		 \    /            /  \                  /			 /
+ * 		  \  /            /    \(x3,y3)         /			/
+ *         \/            /      \              /		   /
+ *         /\           /        \            /			  /
+ *        /  \         /          \			 /			 /
+ *       /    \		(x1,y1)	    (x4,y4)		/			/
+ *      /    (x4,y4)					(x1,y1)		(x4,y4)
+ *   (x1,y1)
+ * 
+ * Two lines intersect in (a and b) and two lines are parallel in (c).
+ * 
+ *    1 1 4 4 1 8 2 4 - result 2.4 and -2.4
+ *    
+ *    0 1 0 4 1 8 1 4 - Parallel
+ *    
+ *    
  * @author lucasmaximo
  *
  */
 
+import java.text.DecimalFormat;
 /** Necessary imports */
 import java.util.Scanner;
 
@@ -29,13 +50,79 @@ public class Exercise_8_31{
 	public static void main(String[] arg) {
 
 		//create the necessary objects
-		Scanner input = new Scanner (System.in);
+		Scanner input = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat ("####.0");
 
+		/** Created the necessary variable array of 4 by 2 following initial instruction */
+		double [][] matrix = new double [4][2];
+		
+		//Creating the necessary variables 
+		System.out.print("\n\n\tEnter x1, y1, x2, y2, x3, y3, x4, y4 -> ");
+		matrix = fillMatrix(input, matrix);
+		
+
+		double [] result = getIntersectingPoint(matrix);
+
+		if ( result[0] > 100000 || result[1] > 100000) {
+
+			System.out.println("\n\tTwo lines are parallel in (c). \t\t" );
+
+		}else {
+			System.out.println("\n\tTwo lines intersect in (" + df.format(result[0]) + " and " + df.format(result[1]) + "). \t\t" );
+		}
+		
 		input.close();
+		
 	}//closing the main method
 
+	/** Created a method in order to follow all the initial instructions */
+	public static double[] getIntersectingPoint(double[][] points) {
+//		x1, y1, 
+//		x2, y2, 
+//		x3, y3, 
+//		x4, y4:
+
+//		double a = y1 - y2;
+		double a = points[0][1] - points[1][1];
+		
+//		double b = x1 - x2;
+		double b = points[0][0] - points[1][0];
+		
+//		double c = y3 - y4;
+		double c = points[2][1] - points[3][1];
+		
+//		double d = x3 - x4;
+		double d = points[2][0] - points[3][0];
+		
+//		double e = (a * x1) - (b * y1);
+		double e = (a * points[0][0]) - (b * points[0][1]);
+		
+//		double f = (c * x3) - (d * y3);
+		double f = (c * points[2][0]) - (d * points[2][1]);
+
+		double [] answer = new double [2];
+		
+		answer[0] = ((e * d) - (b * f)) / ((a * d) - (b * c));
+		answer[1] = ((a * f) - (e * c)) / ((a * d) - (b * c));
+		
+		return answer;
+		
+	}//closing method get Intersecting Point
+
+	/** Created a method in order to fill all positions of the matrix */
+	public static double [][] fillMatrix(Scanner input, double [][] matrix){
 	
-
-
+		double [][] m = matrix.clone();
+		/** created a for loop in order to absorb the user insertions to the matrix */
+		for (int row = 0; row < matrix.length; row++) {
+			//created the nested for loop in order to run all the columns
+			for(int columns = 0; columns < matrix[row].length; columns++) {
+				m[row][columns] = input.nextDouble();
+			}//closing the nested for loop
+		}//closing the main for loop
+		
+		
+		return m;
+	}//closing method fill Matrix
 }//closing the class_8_31
 
