@@ -329,5 +329,5 @@ public class Exercise_8_20{
 		}
 	}//closing method print matrix
 
-}//closing the class_8_01
+}//closing the class_8_20
 

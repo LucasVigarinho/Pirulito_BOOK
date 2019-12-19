@@ -108,5 +108,5 @@ public class Exercise_8_11{
 		return s.toString();
 	}//closing the method
 
-}//closing the class_8_01
+}//closing the class_8_11
 

@@ -125,5 +125,5 @@ public class Exercise_8_22{
 	}//closing test matrix method called evenNumbers 1s
 
 
-}//closing the class_8_01
+}//closing the class_8_22
 

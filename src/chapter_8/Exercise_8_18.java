@@ -75,5 +75,5 @@ public class Exercise_8_18{
 			System.out.print("\n\t");
 		}
 	}
-}//closing the class_8_01
+}//closing the class_8_18
 
