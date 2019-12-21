@@ -27,7 +27,7 @@ package chapter_8;
 /** Necessary imports */
 import java.util.Scanner;
 
-/** Creating the class named Exercise_8_01 */
+/** Creating the class named Exercise_8_36 */
 public class Exercise_8_36{
 
 	/** Creating the main method */
@@ -154,5 +154,5 @@ public class Exercise_8_36{
 	}//closing method print matrix
 	
 
-}//closing the class_8_01
+}//closing the class_8_36
 
