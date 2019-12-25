@@ -49,18 +49,16 @@ public class Exercise_9_03{
 		Date date6 = new Date(1000000000);
 		//printing out the date from 1970 using toString() method
 		System.out.print("\n\n\t"+ date6.toString());
-		
-		//out of range - check on Internet possible solutions
 
-//		//create the seventh object using the library date, using 10000
-//		Date date7 = new Date(10000000000);
-//		//printing out the date from 1970 using toString() method
-//		System.out.print("\n\n\t"+ date7.toString());
-//
-//		//create the eight object using the library date, using 10000
-//		Date date8 = new Date(100000000000);
-//		//printing out the date from 1970 using toString() method
-//		System.out.print("\n\n\t"+ date8.toString());
+		//create the seventh object using the library date, using 10000
+		Date date7 = new Date(10000000000L);
+		//printing out the date from 1970 using toString() method
+		System.out.print("\n\n\t"+ date7.toString());
+
+		//create the eight object using the library date, using 10000
+		Date date8 = new Date(100000000000L);
+		//printing out the date from 1970 using toString() method
+		System.out.print("\n\n\t"+ date8.toString());
 
 	}//closing the main method
 
