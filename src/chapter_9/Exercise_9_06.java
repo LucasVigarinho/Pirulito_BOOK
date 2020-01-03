@@ -18,14 +18,24 @@ package chapter_9;
  */
 /** Draw the UML diagram for the class and then implement the class.  
  * 
- * 			|--------------|
- * 			|Exercise_9_06 |
- * 			|--------------|	
- * 			
+ * 			|                       Exercise_9_06						|		
+ * 			|-----------------------------------------------------------|
+ * 			|							Account     					|
+ * 			|-----------------------------------------------------------|	
+ * 			| - startTime: long					  						|
+ * 			| - endTime: long           								|       							
+ * 			|-----------------------------------------------------------|
+ * 			| + StopWatch ()           								    |
+ * 			| + start(): void										  	|
+ * 			| + stop(): long								       		|
+ * 			| + getElapsedTime(): long									|
+ * 			|___________________________________________________________|  
+ * 
+ * 
  * 
  * */
 /** Necessary imports */
-import java.util.Date;
+
 
 /** Creating the class named Exercise_9_06 */
 public class Exercise_9_06{

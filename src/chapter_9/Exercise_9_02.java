@@ -25,9 +25,26 @@ package chapter_9;
 
 /** Draw the UML diagram for the class and then implement the class.  
  * 
- * 			|--------------|
- * 			|Exercise_9_02 |
- * 			|--------------|	
+ * 			|                       Exercise_9_02						|
+ * 			|-----------------------------------------------------------|
+ * 			|							Stock     					|
+ * 			|-----------------------------------------------------------|	
+ * 			| + symbol: String					  						|
+ * 			| + stockName: String           							|
+ * 			| + previousClosingPrice: double							|
+ * 			| + currentPrice: double         							|
+ * 			|-----------------------------------------------------------|
+ * 			| + Stock(simbol: String, stockName: String) ()			    |
+ * 			| + getChangePercent(): double			  					|
+ * 			| + getSymbol(): String					 		       		|
+ * 			| + setSymbol(symbol: String): void 						|
+ * 			| + getStockName(): String									|
+ * 			| + setStockName(stockName: String): void					|
+ * 			| + getPreviousClosingPrice(): double						|
+ * 			| + getCurrentPrice(): double 								|
+ * 			| + setCurrentPrice(currentPrice: double): void				|
+ * 			|___________________________________________________________|  
+ * 	
  * 			
  * 
  * */
