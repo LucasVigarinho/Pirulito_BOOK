@@ -177,6 +177,4 @@ class Fan{
 
 	}//closing to string
 
-
-
 }//closing fun class 
