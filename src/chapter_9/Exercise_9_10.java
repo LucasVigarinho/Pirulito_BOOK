@@ -35,6 +35,7 @@ package chapter_9;
  * 			| - b: double      	    									|
  * 			| - c: double   											|
  * 			|-----------------------------------------------------------|
+ * 			| + QuadraticEquation (a: double, b: double, c: double)		|
  * 			| + getA (): double											|
  * 			| + getB (): double											|
  * 			| + getC (): double											|
