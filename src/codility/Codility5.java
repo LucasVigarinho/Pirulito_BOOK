@@ -1,4 +1,4 @@
-package chapter_10;
+package codility;
 
 public class Codility5 {
 	public static void main(String[] args){
