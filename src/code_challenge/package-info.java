@@ -5,4 +5,4 @@
  * @author lucasmaximo
  *
  */
-package codility;
+package code_challenge;

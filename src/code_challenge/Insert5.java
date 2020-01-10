@@ -1,6 +1,6 @@
-package codility;
+package code_challenge;
 
-public class Codility5 {
+public class Insert5 {
 	public static void main(String[] args){
 		System.out.println(solution(268));
 		System.out.println(solution(670));

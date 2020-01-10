@@ -1,8 +1,8 @@
-package codility;
+package code_challenge;
 
 
 
-public class CodilityString {
+public class CountingExtensions {
 	public static void main(String[] args){
 		StringBuffer sb = new StringBuffer();
 
@@ -32,13 +32,13 @@ public class CodilityString {
 			String finalSize = size[0];
 			
 			
-			if(finalExtension.equalsIgnoreCase("mp3") || finalExtension.equalsIgnoreCase("aac")|| finalExtension.equalsIgnoreCase("flac")) {
+			if(finalExtension.equals("mp3") || finalExtension.equals("aac")|| finalExtension.equals("flac")) {
 				music += Integer.parseInt(finalSize);
 			}
-			else if(finalExtension.equalsIgnoreCase("jpg") || finalExtension.equalsIgnoreCase("bmp")|| finalExtension.equalsIgnoreCase("gif")) {
+			else if(finalExtension.equals("jpg") || finalExtension.equals("bmp")|| finalExtension.equals("gif")) {
 				images += Integer.parseInt(finalSize);
 			}
-			else if(finalExtension.equalsIgnoreCase("mp4") || finalExtension.equalsIgnoreCase("avi")|| finalExtension.equalsIgnoreCase("mkv")) {
+			else if(finalExtension.equals("mp4") || finalExtension.equals("avi")|| finalExtension.equals("mkv")) {
 				movies += Integer.parseInt(finalSize);
 			} else {
 				other += Integer.parseInt(finalSize);
