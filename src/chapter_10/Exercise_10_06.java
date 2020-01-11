@@ -12,6 +12,22 @@ package chapter_10;
  * @author lucasmaximo
  *
  */
+/** Draw the UML diagram for the class and then implement the class.
+
+* 			|						StackOfIntegers  					|
+* 			|-----------------------------------------------------------|	
+* 			| - elements: int[]  				  						|
+* 			| - size: int		  										|
+* 			|-----------------------------------------------------------|
+* 			| + StackOfIntegers()										|
+* 			| + StackOfIntegers(capacity: int)							|
+* 			| + empty(): boolean										|	
+* 			| + peek(): int												|
+* 			| + push(value: int): void									|
+* 			| + pop(): int												|
+* 			| + getSize(): int											|
+* 			|___________________________________________________________| 
+*/
 
 /** Necessary imports */
 
