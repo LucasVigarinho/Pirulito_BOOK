@@ -121,7 +121,7 @@ public class Exercise_9_07{
  * 		account.
  * 		■ A method named deposit that deposits a specified amount to the account.
  * */
-class Account {
+class  Account {
 
 
 	/** ■ A private int data field named id for the account (default 0). */
