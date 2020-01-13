@@ -97,26 +97,58 @@ public class Exercise_10_08{
 		 * 	income from $50,000 to $60,000 with intervals of $1,000 for all four statuses.
 		 * 	The tax rates for the year 2009 were given in Table 3.2. The tax rates for 2001
 		 * 	are shown in Table 10.1.*/
+		 int[][] tax2009 = {{8350 , 33950, 82250 , 171550, 372950},
+				 			{16700, 67900, 137050, 208850, 372950},
+				 			{8350 , 33950, 68525 , 104425, 186475},
+				 			{11950, 45500, 117450, 190200, 372950}};
 
+		 int[][] tax2001 = {{27050, 65550 , 136750, 297350},
+				 			{45200, 109250, 166500, 297350},
+				 			{22600, 54625 , 83250 , 148675},
+				 			{36250, 93650 , 151650, 297350}};
+
+		 double[] rate2009 = {0.10, 0.15 , 0.25 , 0.28 , 0.33 , 0.35};
+		 double[] rate2001 = {0.15, 0.275, 0.305, 0.355, 0.391};
+		
+		 Tax test1 = new Tax(0, tax2009, rate2009, 5000);
+		 Tax test2 = new Tax(0, tax2001, rate2001, 5000);
+		 
 		/** print the 2001 and 2009 tax tables */
-		print();
+		printTable(test1, 2009);
+		printTable(test2, 2001);
+
 }//closing the main method
 
-	public static void print() {
+	public static void printTable(Tax data, int year) {
 		
 		System.out.print(
-			"\n\n\tTABLE 2001 -  United States Federal Personal Tax Rates														\n" +
+			"\n\n\tTABLE "+ year + " -  United States Federal Personal Tax Rates														\n" +
 			 "\t----------------------------------------------------------------------------------------------------------------\n" +
 			 "\t					Married filing jointly 		Married filing     												\n" +
-			 "\n\tTax rate	Single filers		or qualifying widow(er)		separately 		Head of household					\n" +
-			 "\t----------------------------------------------------------------------------------------------------------------\n" +
-			 "\n\t15% 		Up to $27,050 		Up to $45,200 			Up to $22,600 		Up to $36,250       				\n" +
-			 "\n\t27.5% 		$27,051–$65,550 	$45,201–$109,250 		$22,601–$54,625 	$36,251–$93,650 				\n" +
-			 "\n\t30.5% 		$65,551–$136,750 	$109,251–$166,500 		$54,626–$83,250 	$93,651–$151,650				\n" +
-			 "\n\t35.5% 		$136,751–$297,350 	$166,501–$297,350 		$83,251–$148,675 	$151,651–$297,350				\n" +
-			 "\n\t39.1% 		$297,351 or more 	$297,351 or more 		$148,676 or more 	$297,351 or more				\n" 
+			 "\n\tIncome		Single filers		or qualifying widow(er)		separately 		Head of household					\n" +
+			 "\t----------------------------------------------------------------------------------------------------------------\n" 
+//			 "\n\t15%\t\tUp to $27,050\t\tUp to $45,200\t\t\tUp to $22,600\t\tUp to $36,250       				\n" +
+//			 "\n\t27.5% 		$27,051–$65,550 	$45,201–$109,250 		$22,601–$54,625 	$36,251–$93,650 				\n" +
+//			 "\n\t30.5% 		$65,551–$136,750 	$109,251–$166,500 		$54,626–$83,250 	$93,651–$151,650				\n" +
+//			 "\n\t35.5% 		$136,751–$297,350 	$166,501–$297,350 		$83,251–$148,675 	$151,651–$297,350				\n" +
+//			 "\n\t39.1% 		$297,351 or more 	$297,351 or more 		$148,676 or more 	$297,351 or more				\n" 
 				);
+		System.out.printf("\n");
+		for (int i = 50000; i <= 60000; i += 1000) {
+			System.out.printf("\t"+ "%-10d\t", i);
+			for (int j = 0; j <= 3; j++) {
+				data.setFilingStatus(j);
+				data.setTaxableIncome(i);
+				if(j == 1) {
+				System.out.printf("%-8.2f\t\t\t", data.getTax());
+				}else {
+					System.out.printf("%-8.2f\t\t", data.getTax());
+				}
+			}
+			System.out.println();
+		}
 	}
+	
 }//closing the Exercise_10_01 method (used as driver method)
 
 /** 	
@@ -208,12 +240,54 @@ class Tax{
 		}
 	}
 	public double getTaxableIncome() {
-		/** Define the way to calculate tax*/
-		
-		
-		
+		/** Define the way to calculate tax*/	
 		return taxableIncome;
 	}
 	public void setTaxableIncome(double taxableIncome) {this.taxableIncome = taxableIncome;}
+
+	/** by: https://github.com/maxalthoff */
+	public double getTax() {
+		double tax = 0.0;
+		int lastIndex = -1;
+
+		// There are three basic parts to the tax calculation process.
+		// 1. The first bracket.
+		if (getTaxableIncome() <= getBrackets()[getFilingStatus()][0]) {
+			return getTaxableIncome() * getRates()[0];
+		} else {
+			tax += getBrackets()[getFilingStatus()][0] * getRates()[0];
+			// 2. Middle brackets. Iterate through the brackets, calculating tax
+			//    until taxable incomes does not exceed the current bracket.
+			for (int i = 1; i < getBrackets()[getFilingStatus()].length; i++) {
+				if (getTaxableIncome() > getBrackets()[getFilingStatus()][i]) {
+					tax += (getBrackets()[getFilingStatus()][i] - getBrackets()[getFilingStatus()][i - 1]) *
+							getRates()[i];
+				} else {
+					// Set the last index to the previous bracket and break from the loop.
+					lastIndex = i;
+					break;
+				}
+			}
+		}
+		// 3. The last bracket
+		// This handles the case of a taxable income that exceeds the low bound
+		// of the last tax bracket. We use the last tax bracket and the last rate
+		// to calculate the final portion of taxes.
+		int lastBracket = getBrackets()[getFilingStatus()].length - 1;
+		int lastRate = getRates().length - 1;
+		if (getTaxableIncome() > getBrackets()[getFilingStatus()][lastBracket]) {
+			tax += (getTaxableIncome() - getBrackets()[getFilingStatus()][lastBracket]) *
+					getRates()[lastRate];
+		} else {
+			// And this handles all other cases. We use the last index of the loop
+			// (minus 1, to get the bracket before that) along with the last index
+			// of the rates (since we're calculating tax from the part that flows
+			// into the next bracket) to calculate the final portion of taxes.
+			tax += (getTaxableIncome() - getBrackets()[getFilingStatus()][lastIndex - 1]) *
+					getRates()[lastIndex];
+		}
+
+		return tax;
+	}
 
 }
