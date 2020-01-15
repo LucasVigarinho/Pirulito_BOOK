@@ -87,7 +87,7 @@ package chapter_10;
 /** Necessary imports */
 
 
-/** Creating the class named Exercise_10_01 */
+/** Creating the class named Exercise_10_08 */
 public class Exercise_10_08{
 
 	/** Creating the main method */
@@ -114,8 +114,9 @@ public class Exercise_10_08{
 		 Tax test2 = new Tax(0, tax2001, rate2001, 5000);
 		 
 		/** print the 2001 and 2009 tax tables */
-		printTable(test1, 2009);
 		printTable(test2, 2001);
+		printTable(test1, 2009);
+
 
 }//closing the main method
 
@@ -149,7 +150,7 @@ public class Exercise_10_08{
 		}
 	}
 	
-}//closing the Exercise_10_01 method (used as driver method)
+}//closing the Exercise_10_08 method (used as driver method)
 
 /** 	
  * 		 One of the four tax-filing statuses: 	0—single filer, 

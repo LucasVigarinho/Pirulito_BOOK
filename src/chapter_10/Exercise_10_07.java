@@ -99,7 +99,7 @@ package chapter_10;
 import java.util.Date;
 import java.util.Scanner;
 
-/** Creating the class named Exercise_10_01 */
+/** Creating the class named Exercise_10_07 */
 public class Exercise_10_07{
 
 	/** Creating the main method */
@@ -194,7 +194,7 @@ public class Exercise_10_07{
 	}
 
 
-}//closing the Exercise_10_01 method (used as driver method)
+}//closing the Exercise_10_07 method (used as driver method)
 
 class  Account {
 

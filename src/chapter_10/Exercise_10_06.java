@@ -32,7 +32,7 @@ import java.util.Scanner;
  */
 
 /** Necessary imports */
-
+import chapter_10.Exercise_10_05;
 
 /** Creating the class named Exercise_10_06 */
 public class Exercise_10_06{
@@ -108,8 +108,8 @@ public class Exercise_10_06{
 		return s;
 	}
 
-
-
 }//closing the Exercise_10_06 method (used as driver method)
+
+
 
 
