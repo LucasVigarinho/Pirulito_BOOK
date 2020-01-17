@@ -47,7 +47,7 @@ package chapter_10;
 /** Necessary imports */
 
 
-/** Creating the class named Exercise_10_01 */
+/** Creating the class named Exercise_10_10 */
 public class Exercise_10_10{
 
 	/** Creating the main method */
@@ -83,7 +83,7 @@ public class Exercise_10_10{
 
 
 
-}//closing the Exercise_10_01 method (used as driver method)
+}//closing the Exercise_10_10 method (used as driver method)
 
 /** (The Queue class) Section 10.6 gives a class for Stack. Design a class named
  * 		Queue for storing integers. 
