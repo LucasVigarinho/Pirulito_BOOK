@@ -50,7 +50,7 @@ public class Exercise_10_04{
 		MyPoint point1 = new MyPoint();
 		MyPoint point2 = new MyPoint(10, 30.5);
 		DecimalFormat df = new DecimalFormat("###0.00");
-		
+
 		System.out.print("\n\n\tThe distance between point two points (0, 0) and (10, 30.5) -> " + df.format(point1.distance(point2)) );
 		System.out.print("\n\n\tThe distance between point two points (0, 0) and (10, 30.5) -> " + df.format(point1.distance(10, 30.5)) );
 
@@ -71,7 +71,7 @@ class MyPoint{
 	 * 	methods.*/
 	private double x;
 	private double y;
-	
+
 	/** ■ A no-arg constructor that creates a point (0, 0).*/
 	MyPoint(){
 		x = 0;
@@ -82,18 +82,25 @@ class MyPoint{
 		this.x = x;
 		this.y = y;
 	}
-	
+
 	/**	■ A method named distance that returns the distance from this point to a
 	 * 	specified point of the MyPoint type. */
 	public double distance(MyPoint point) {
-		
+
 		return Math.sqrt(Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y, 2));
 	}
-	
+
 	/**	■ A method named distance that returns the distance from this point to
 	 * 	another point with specified x- and y-coordinates. */
 	public double distance(double x, double y) {
-		
+
 		return Math.sqrt(Math.pow(this.x - x, 2) + Math.pow(this.y - y, 2));
+	}
+
+	public double getX() {
+		return x;
+	}
+	public double getY() {
+		return y;
 	}
 }//closing MyPoint class
