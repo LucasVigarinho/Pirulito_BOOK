@@ -2,7 +2,8 @@ package chapter_10;
 
 /** 
  * 			
- * 
+ * 	(Divisible by 2 or 3) Find the first ten numbers with 50 decimal digits that are
+ * 	divisible by 2 or 3.
  * 		
  * 		
  * @author lucasmaximo

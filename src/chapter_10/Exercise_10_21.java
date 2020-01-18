@@ -1,7 +1,8 @@
 package chapter_10;
 
 /** 
- * 			
+ * (Divisible by 5 or 6) Find the first ten numbers greater than Long.MAX_VALUE
+ * that are divisible by 5 or 6.
  * 
  * 		
  * 		

@@ -2,7 +2,8 @@ package chapter_10;
 
 /** 
  * 			
- * 
+ * 	(Large prime numbers) Write a program that finds five prime numbers larger
+ * 	than Long.MAX_VALUE.
  * 		
  * 		
  * @author lucasmaximo

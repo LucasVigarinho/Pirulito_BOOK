@@ -2,7 +2,10 @@ package chapter_10;
 
 /** 
  * 			
- * 
+ * 	(Calculator) Revise Listing 7.9, Calculator.java, to accept an expression as
+ * 	a string in which the operands and operator are separated by zero or more
+ * 	spaces. For example, 3+4 and 3 + 4 are acceptable expressions. Here is a
+ * 	sample run:
  * 		
  * 		
  * @author lucasmaximo

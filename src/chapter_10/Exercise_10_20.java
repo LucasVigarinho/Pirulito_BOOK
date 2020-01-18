@@ -2,9 +2,15 @@ package chapter_10;
 
 /** 
  * 			
+ * 	(Approximate e) Programming Exercise 5.26 approximates e using the following
+ * 	series:
+ * 		
+ * 			e = 1 + (1/1!) + (1/2!) + (1/3!) + (1/4!) + ... + (1/n!)			
  * 
- * 		
- * 		
+ * 	In order to get better precision, use BigDecimal with 25 digits of precision in
+ * 	the computation. Write a program that displays the e value for i = 100, 200, . . . ,
+ * 	and 1000.
+ * 
  * @author lucasmaximo
  *
  */

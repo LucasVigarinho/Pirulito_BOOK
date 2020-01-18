@@ -2,7 +2,9 @@ package chapter_10;
 
 /** 
  * 			
- * 
+ * 	(Implement the Character class) The Character class is provided in the Java
+ * 	library. Provide your own implementation for this class. Name the new class
+ * 	MyCharacter.
  * 		
  * 		
  * @author lucasmaximo
