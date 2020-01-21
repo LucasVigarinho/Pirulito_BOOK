@@ -24,9 +24,12 @@ public class Exercise_7_07{
 		
 		/** Created the necessary variables */
 		int [] myArray = new int [10];
+		int [][] myJU = new int [3][];
 		int count = 0;
 		int position = 0;
-		
+		int a [] = {1,2, 053, 4};
+		int b [][] = { {1,2,4} , {2,2,1}, {0, 43, 2}};
+		System.out.print(a [3] == b [0][2] );
 		/** Printed out the initial message information */
 		System.out.print("\n\n\tThe numbers\t");
 		

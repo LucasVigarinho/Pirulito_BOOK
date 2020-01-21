@@ -38,10 +38,12 @@ public class Exercise_10_16{
 
 		}while(count < 10);
 
+		String a = "a";
+		System.out.print(a);
 		
-		Double x = 3.5;
-		System.out.println(x.intValue());
-		System.out.println(x.compareTo(4.5));
+		a = "João";
+		
+		System.out.print(a);
 	}//closing the main method
 
 

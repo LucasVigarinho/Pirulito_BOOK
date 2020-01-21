@@ -56,6 +56,7 @@ public class Exercise_10_15{
 		double width;
 		double height;
 		
+		
 	}
 
 }//closing the Exercise_10_01 method (used as driver method)

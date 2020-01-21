@@ -23,16 +23,23 @@ package chapter_10;
 
 /** Creating the class named Exercise_10_01 */
 public class Exercise_10_28{
-
+ int a = 10;
+ 
 	/** Creating the main method */
 	public static void main(String[] arg) {
 
-		
-		
-
+		new Exercise_10_28().print();
+		String s = "Java";
+		s += (" SE 6");
+		s.replace('6', '7');	
+		System.out.print(s);
 	}//closing the main method
 
 	
+	public void print() {
+		int a = 8;
+		System.out.print(a + " ");
+	}
 
 }//closing the Exercise_10_01 method (used as driver method)
 
