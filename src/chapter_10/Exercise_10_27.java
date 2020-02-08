@@ -21,7 +21,7 @@ package chapter_10;
 
 /** Necessary imports */
 
-/** Creating the class named Exercise_10_01 */
+/** Creating the class named Exercise_10_27 */
 public class Exercise_10_27{
 
 	/** Creating the main method */
@@ -58,7 +58,7 @@ public class Exercise_10_27{
 
 	
 
-}//closing the Exercise_10_01 method (used as driver method)
+}//closing the Exercise_10_27 method (used as driver method)
 
 
 /** (Implement the StringBuilder class) ...	(name the new class MyStringBuilder1): */
