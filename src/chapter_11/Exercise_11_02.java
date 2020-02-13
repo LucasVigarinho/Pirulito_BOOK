@@ -21,39 +21,6 @@ package chapter_11;
  * 
  * */
 
-/**			IMPORTED NECESSARY LIBRARIES 
- * */
-import java.util.GregorianCalendar;
-
-/** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
-public class Exercise_11_02 {
-	
-	
-	/** Created the main method, in order to test all the methods that eventually has to be created and 
-	 * make possible the interaction with the user */
-	public static void main(String[] args) {
-		
-		/**Creating a test for each class and its methods */
-		Person person1 = new Person();
-		System.out.print("\n\n\tPrinting the person1 - only a default person" + person1.toString());
-		
-		Person person2 = new Student("Lucas", "Ireland", "083xxxxxx", "lucas.maximo....", "Fresnman"  );
-		System.out.print("\n\n\tPrinting the person2 - only a student " + person2.toString());
-
-		Person person3 = new Employee("José", "Glasgow", "089xxxxx", "jose@gmail.com", 5, 30000);
-		System.out.print("\n\n\tPrinting the person3 - only a Employee " + person3.toString());
-
-		Person person4 = new Staff("Jorge", "India", "035xxxxx", "indian@gmail.com", 3, 40000, "CTO");
-		System.out.print("\n\n\tPrinting the person4 - only a Staff " + person4.toString());
-		
-		Person person5 = new Faculty("Juliao", "Brazil", "027xxxx09854", "juliaocrazy@gmail.com", 2, 100000, 2 , "Founder");
-		System.out.print("\n\n\tPrinting the person5 - only a Faculty " + person5.toString());
-
-	}//closing the mains method
-
-	
-}//closing class exercise_11_01
-
 
 /** 
  * 		1 - Design a class named Person and its two subclasses named Student and Employee.
@@ -111,6 +78,39 @@ public class Exercise_11_02 {
 * 	| 									|    												
 * 	|___________________________________|    												
 */			
+
+import java.util.GregorianCalendar;
+
+/** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
+public class Exercise_11_02 {
+	
+	
+	/** Created the main method, in order to test all the methods that eventually has to be created and 
+	 * make possible the interaction with the user */
+	public static void main(String[] args) {
+		
+		/**Creating a test for each class and its methods */
+		Person person1 = new Person();
+		System.out.print("\n\n\tPrinting the person1 - only a default person" + person1.toString());
+		
+		Person person2 = new Student("Lucas", "Ireland", "083xxxxxx", "lucas.maximo....", "Fresnman"  );
+		System.out.print("\n\n\tPrinting the person2 - only a student " + person2.toString());
+
+		Person person3 = new Employee("José", "Glasgow", "089xxxxx", "jose@gmail.com", 5, 30000);
+		System.out.print("\n\n\tPrinting the person3 - only a Employee " + person3.toString());
+
+		Person person4 = new Staff("Jorge", "India", "035xxxxx", "indian@gmail.com", 3, 40000, "CTO");
+		System.out.print("\n\n\tPrinting the person4 - only a Staff " + person4.toString());
+		
+		Person person5 = new Faculty("Juliao", "Brazil", "027xxxx09854", "juliaocrazy@gmail.com", 2, 100000, 2 , "Founder");
+		System.out.print("\n\n\tPrinting the person5 - only a Faculty " + person5.toString());
+
+	}//closing the mains method
+
+	
+}//closing class exercise_11_01
+
+
 
 
 /** Creating Person Class ( A person has a name, address, phone number, and email address. ) */
