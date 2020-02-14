@@ -53,44 +53,48 @@ import java.util.Date;
 
 /** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
 public class Exercise_11_03 {
-	
-	
+
+
 	/** Created the main method, in order to test all the methods that eventually has to be created and 
 	 * make possible the interaction with the user */
 	public static void main(String[] args) {
-		
+
+		/** Testing the methods */
 		// Create Account, SavingsAccount and Checking Account objects
-				Account account = new Account(1122, 20000);
-				Account savings = new Saving(1001, 20000);
-				Account checking = new Checking(1004, 20000, -20);
-				// Set annual interest rate of 4.5%
-				account.setAnnualInterestRate(4.5);
-				savings.setAnnualInterestRate(4.5);
-				checking.setAnnualInterestRate(4.5);
+		Account account = new Account(1122, 20000);
+		Account savings = new Saving(1001, 20000);
+		Account checking = new Checking(1004, 20000, -20);
+		// Set annual interest rate of 4.5%
+		account.setAnnualInterestRate(4.5);
+		savings.setAnnualInterestRate(4.5);
+		checking.setAnnualInterestRate(4.5);
 
-				// Withdraw $2,500
-				account.withdraw(2500);
-				savings.withdraw(2500);
-				checking.withdraw(2500);
+		// Withdraw $2,500
+		account.withdraw(2500);
+		savings.withdraw(2500);
+		checking.withdraw(2500);
 
-				// Deposit $3,000
-				account.deposit(3000);
-				savings.deposit(3000);
-				checking.deposit(3000);
-		
-				// Invoke toString methods
-				System.out.println(account.toString());
-				System.out.println(savings.toString());
-				System.out.println(checking.toString());
-		
-				
-				checking.withdraw(200);
-				checking.withdraw(200000);
-				
+		// Deposit $3,000
+		account.deposit(3000);
+		savings.deposit(3000);
+		checking.deposit(3000);
+
+		// Invoke toString methods
+		System.out.println(account.toString());
+		System.out.println(savings.toString());
+		System.out.println(checking.toString());
+
+		System.out.println("\n");
+		savings.withdraw(200);
+		savings.withdraw(50000);
+		System.out.println("\n");
+		checking.withdraw(200);
+		checking.withdraw(200000);
+
 	}//closing the mains method
 
-	
-}//closing class exercise_11_01
+
+}//closing class exercise_11_03
 
 
 /** 	 Create two subclasses for checking and saving accounts. */
@@ -162,7 +166,7 @@ class Saving extends Account{
 			setBalance(getBalance() - amount);
 			System.out.println("Your balance has being withdraw");
 		}else {
-			System.out.println("This amount exceed your limit of Overdraft - you have now -> " + String.format("%,2f", getBalance()));
+			System.out.println("This amount exceed your limit of Overdraft - you have now -> " + String.format("%.2f", getBalance()));
 		}
 	}//closing withdraw method
 //	/** Created the Override toString method in order to print the necessary information when asked */
