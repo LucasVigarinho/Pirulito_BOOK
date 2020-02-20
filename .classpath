@@ -8,5 +8,6 @@
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/Lucas_Vigarinho_HDC_PDS_2989295_Workbook4_Sorting_Selection_Bubble"/>
 	<classpathentry kind="src" path="/HDC-OOD"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
