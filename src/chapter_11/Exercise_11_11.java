@@ -45,6 +45,7 @@ public class Exercise_11_11 {
 		
 		sort(numbers);
 		
+		input.close();
 	}//closing the mains method
 
 	/** Created the method sort as asked */
