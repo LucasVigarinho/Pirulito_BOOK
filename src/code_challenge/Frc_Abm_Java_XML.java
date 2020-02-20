@@ -1,7 +1,12 @@
 package code_challenge;
 import java.util.Arrays;
 public class Frc_Abm_Java_XML {
+	
+	private String text;
 
+	Frc_Abm_Java_XML(String text){
+		this.text = text;
+	}
 	/** The main method in order to test all the variables and methods created */
 	public static void main(String[] args) {
 
@@ -20,8 +25,10 @@ public class Frc_Abm_Java_XML {
 				"DTM+182:20090527:102'\n" + 
 				"";			
 				
+		Frc_Abm_Java_XML test = new Frc_Abm_Java_XML(text);
+		
 		/** Created myArray of String to absorb the answer*/
-		String [] myArray = locEdiFact(text);
+		String [] myArray = test.locEdiFact();
 	
 		System.out.print(Arrays.toString(myArray));
 	
@@ -36,11 +43,11 @@ public class Frc_Abm_Java_XML {
 	 * 	with the 2nd and 3rd element of each segment 
 	 * 
 	 * 	Note:  the ‘+’ is an element delimiter   */
-	public static String[] locEdiFact(String text){
+	public  String[] locEdiFact(){
 
 		/** Created an array, in order to absorb the String which is going to be divided,
 		 *  using the first delimiter - jumping line ("\n") */
-		String [] newOne = text.split("\n");
+		String [] newOne = this.text.split("\n");
 		String [] answer = new String [10];
 		int count = 0;
 		
