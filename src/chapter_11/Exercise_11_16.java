@@ -18,17 +18,43 @@ package chapter_11;
 
 /**			IMPORTED NECESSARY LIBRARIES 
  * */
-
+import java.util.Scanner;
+import java.util.ArrayList;
 
 /** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
 public class Exercise_11_16 {
-	
-	
+
+
 	/** Created the main method, in order to test all the methods that eventually has to be created and 
 	 * make possible the interaction with the user */
 	public static void main(String[] args) {
+		ArrayList<Integer> answers = new ArrayList<>();
 		
+		int number1 = (int)(Math.random() * 10);
+		int number2 = (int)(Math.random() * 10);
+
+		// Create a Scanner
+		Scanner input = new Scanner(System.in);
+
+		System.out.print(
+				"What is " + number1 + " + " + number2 + "? ");
+		int answer = input.nextInt();
+		answers.add(answer);
+		
+		while (number1 + number2 != answer) {
+			
+			System.out.print("Wrong answer. Try again. What is " + number1 + " + " + number2 + "? ");
+			answer = input.nextInt();
+			if(answers.contains(answer)) {
+				System.out.println("You already entered "+  answer);
+			}
+			answers.add(answer);
+		}
+
+		System.out.println("You got it!");
+
+		input.close();
 	}//closing the mains method
 
-	
+
 }//closing class exercise_11_01
