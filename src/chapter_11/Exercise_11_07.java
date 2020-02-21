@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 
-/** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
+/** Created the main class, using the name of the package (11) and the exercise (07) in a compose name */
 public class Exercise_11_07 {
 	
 	
@@ -55,5 +55,5 @@ public class Exercise_11_07 {
 			System.out.print((a==0)?list.get(a).toString():", " + list.get(a).toString());
 		}
 	}
-}//closing class exercise_11_01
+}//closing class exercise_11_07
 

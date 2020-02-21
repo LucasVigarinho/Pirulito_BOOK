@@ -17,7 +17,7 @@ package chapter_11;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
+/** Created the main class, using the name of the package (11) and the exercise (04) in a compose name */
 public class Exercise_11_04 {
 	
 	
@@ -59,4 +59,4 @@ public class Exercise_11_04 {
 		return max;
 	}
 	
-}//closing class exercise_11_01
+}//closing class exercise_11_04

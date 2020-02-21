@@ -20,7 +20,7 @@ import java.util.Collections;
 import java.util.Scanner;
 import java.util.Arrays;
 
-/** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
+/** Created the main class, using the name of the package (11) and the exercise (11) in a compose name */
 public class Exercise_11_11 {
 	
 	
@@ -57,4 +57,4 @@ public class Exercise_11_11 {
 		
 	}//closing sort method
 	
-}//closing class exercise_11_01
+}//closing class exercise_11_11

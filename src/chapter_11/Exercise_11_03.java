@@ -51,7 +51,7 @@ import java.util.Date;
  * */																				
 
 
-/** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
+/** Created the main class, using the name of the package (11) and the exercise (03) in a compose name */
 public class Exercise_11_03 {
 
 

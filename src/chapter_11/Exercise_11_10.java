@@ -16,7 +16,7 @@ package chapter_11;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
+/** Created the main class, using the name of the package (11) and the exercise (10) in a compose name */
 public class Exercise_11_10 {
 	
 	
@@ -49,7 +49,7 @@ public class Exercise_11_10 {
 	}//closing the mains method
 
 	
-}//closing class exercise_11_01
+}//closing class exercise_11_10
 /** CREATED THE UML DIAGRAM */
 /**
 |----------------------------|

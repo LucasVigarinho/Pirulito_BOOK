@@ -81,7 +81,7 @@ package chapter_11;
 
 import java.util.GregorianCalendar;
 
-/** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
+/** Created the main class, using the name of the package (11) and the exercise (02) in a compose name */
 public class Exercise_11_02 {
 	
 	
@@ -108,7 +108,7 @@ public class Exercise_11_02 {
 	}//closing the mains method
 
 	
-}//closing class exercise_11_01
+}//closing class exercise_11_02
 
 
 

@@ -43,7 +43,7 @@ import java.util.Date;
 |_____________________________________|
 
 */
-/** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
+/** Created the main class, using the name of the package (11) and the exercise (06) in a compose name */
 public class Exercise_11_06 {
 	
 	
@@ -71,7 +71,7 @@ public class Exercise_11_06 {
 	}//closing the mains method
 
 	
-}//closing class exercise_11_01
+}//closing class exercise_11_06
 
 
 class Loan {

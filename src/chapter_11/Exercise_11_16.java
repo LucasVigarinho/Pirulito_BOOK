@@ -21,7 +21,7 @@ package chapter_11;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-/** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
+/** Created the main class, using the name of the package (11) and the exercise (16) in a compose name */
 public class Exercise_11_16 {
 
 
@@ -57,4 +57,4 @@ public class Exercise_11_16 {
 	}//closing the mains method
 
 
-}//closing class exercise_11_01
+}//closing class exercise_11_16

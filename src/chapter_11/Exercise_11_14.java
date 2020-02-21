@@ -26,7 +26,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/** Created the main class, using the name of the package (11) and the exercise (01) in a compose name */
+/** Created the main class, using the name of the package (11) and the exercise (14) in a compose name */
 public class Exercise_11_14 {
 	
 	
@@ -76,5 +76,5 @@ public class Exercise_11_14 {
 		return (ArrayList<Integer>) Stream.concat(list1.stream(), list2.stream()).collect(Collectors.toList());
 	}
 	
-}//closing class exercise_11_01
+}//closing class exercise_11_14
 
