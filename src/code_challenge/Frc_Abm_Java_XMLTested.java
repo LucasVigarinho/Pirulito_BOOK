@@ -1,16 +1,18 @@
 package code_challenge;
+//import org.junit.jupiter.api.Test;
+
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class Frc_Abm_Java_XMLTest {
+class Frc_Abm_Java_XMLTested {
 
 	Frc_Abm_Java_XML test;
 	String text, textIfNull, textNoLOC;
 	Frc_Abm_Java_XML testOneABM, testTwoABM, testThreeABM;
 
-	@Test public void setUp() throws Exception {
+	@Test void setUp() throws Exception {
 		test = new Frc_Abm_Java_XML("UNA:+.? '\n" + 
 				"UNB+UNOC:3+2021000969+4441963198+180525:1225+3VAL2MJV6EH9IX+KMSV7HMD+CUSDECU-IE++1++1'\n" + 
 				"UNH+EDIFACT+CUSDEC:D:96B:UN:145050'\n" + 
@@ -83,5 +85,4 @@ public class Frc_Abm_Java_XMLTest {
 		testThreeABM.locEdiFact();
 
 	}
-
 }

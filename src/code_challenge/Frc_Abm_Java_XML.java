@@ -1,7 +1,7 @@
 package code_challenge;
 import java.util.Arrays;
 public class Frc_Abm_Java_XML {
-	
+
 	private String text;
 
 	Frc_Abm_Java_XML(String text){
@@ -24,14 +24,14 @@ public class Frc_Abm_Java_XML {
 				"DTM+268:20090626:102'\n" + 
 				"DTM+182:20090527:102'\n" + 
 				"";			
-				
+
 		Frc_Abm_Java_XML test = new Frc_Abm_Java_XML(text);
-		
+
 		/** Created myArray of String to absorb the answer*/
 		String [] myArray = test.locEdiFact();
-	
+
 		System.out.print(Arrays.toString(myArray));
-	
+
 
 	}//closing the main method
 
@@ -45,16 +45,24 @@ public class Frc_Abm_Java_XML {
 	 * 	Note:  the ‘+’ is an element delimiter   */
 	public  String[] locEdiFact(){
 
+		/** Created an if statement in order to verify the possibility of NULL or empty String*/
+		if(text == null && !"".equalsIgnoreCase(text)){
+			throw new IllegalArgumentException("Text parameter is empty or null");
+		}
+		/** Created an if statement in order to verify the possibility of no LOC in the String*/
+		if(!text.contains("LOC")){
+			throw new IllegalArgumentException("LOC segment not found");
+		}
 		/** Created an array, in order to absorb the String which is going to be divided,
 		 *  using the first delimiter - jumping line ("\n") */
 		String [] newOne = this.text.split("\n");
 		String [] answer = new String [10];
 		int count = 0;
-		
+
 		/** Created a for loop, in order to verify all the positions of the newOne Array */
 		for(int i = 0; i < newOne.length ; i++) {
 
-			
+
 			/** Created an array called item, which will absorb the value of which position 
 			 * array subdivided again, now using the new delimited "+" sign. */
 			String [] item = newOne[i].split("\\+");
