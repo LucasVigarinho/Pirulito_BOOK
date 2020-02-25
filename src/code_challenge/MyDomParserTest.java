@@ -1,14 +1,39 @@
 package code_challenge;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Before;
+import org.junit.Test;
 
-import org.junit.jupiter.api.Test;
+public class MyDomParserTest {
 
-class MyDomParserTest {
+	MyDomParser test;
+	String text, textIfNull;
+	MyDomParser testOneXML, testTwoXML, testThreeXML;
 
-	@Test
-	void test() {
+
+
+	@Before
+	public void init() {
+		text = "documentTest.xml";
+
+		textIfNull = null;
+
 		
+		testOneXML = new MyDomParser(text);
+		testTwoXML = new MyDomParser (textIfNull);
+
 	}
+
+
+	@Test public void setUp() throws Exception {
+		test = new MyDomParser("documentTest.xml");
+	}
+
+
+	@Test(expected = IllegalArgumentException.class)
+	public void checkIfArgumentParameterIsNull() {
+		testTwoXML.solution();
+	}
+
+
 
 }

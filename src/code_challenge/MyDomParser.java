@@ -19,22 +19,34 @@ import org.xml.sax.SAXException;
 
 /** Created the MyDomParser class */
 public class MyDomParser {
+	
+	private String text;
+	
+	MyDomParser(String text){
+		this.text = text;
+	}
 
 	/** Created the main class */
 	public static void main(String[] args) {
-		solution("documentTest.xml");
+		MyDomParser test = new MyDomParser("documentTest.xml");
+		test.solution();
 	}
-	
+
 	/** Created the method in order to extract the information form xml*/
-	public static void solution(String doc) {
+	public void solution() {
 		/** Instantiate a new SocumentBuilderFactory*/
 		DocumentBuilderFactory factory =  DocumentBuilderFactory.newInstance();
+		
+		/** Created an if statement in order to verify the possibility of NULL or empty String*/
+		if(text == null && !"".equalsIgnoreCase(text)){
+			throw new IllegalArgumentException("Text parameter is empty or null");
+		}
 		
 		//surround the first try catch in order to catch if the document out of pattern
 		try {
 			//build a document 
 			DocumentBuilder builder = factory.newDocumentBuilder();
-			Document document = builder.parse(doc);
+			Document document = builder.parse(text);
 			//Stipulate the node
 			NodeList refList = document.getElementsByTagName("Reference");
 			//look for all the nodes with the same reference
