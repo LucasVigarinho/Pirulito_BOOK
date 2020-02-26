@@ -41,9 +41,13 @@ public class Exercise_11_12 {
 		for(int i = 0; i < 5; i ++ ) {
 			System.out.print("\n\t\tPlease, insert the number -> ");
 			numbers.add(input.nextDouble());
+			
 		}//closing for loop 
 		
-		System.out.print("\n\t\t" + sum(numbers));
+		if(numbers.contains(3.0)) {
+			System.out.print("\n\t\t" + sum(numbers));
+		}
+		
 		
 		input.close();
 	}//closing the mains method

@@ -14,7 +14,8 @@ package chapter_12;
 
 /**			IMPORTED NECESSARY LIBRARIES */
 import java.util.Scanner;
-
+import java.util.List;
+import java.util.ArrayList;
 /** Created the main class, using the name of the package (12) and the exercise (03) in a compose name */
 public class Exercise_12_03 {
 
@@ -56,6 +57,7 @@ public class Exercise_12_03 {
 				input.nextLine();
 			}
 		}
+		input.close();
 		
 	}//closing the mains method
 
