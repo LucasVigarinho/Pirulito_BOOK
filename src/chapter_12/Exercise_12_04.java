@@ -28,9 +28,11 @@ public class Exercise_12_04 {
 		try {
             Loan testNewLoan = new Loan(2.0, 0, -10);
         } catch (IllegalArgumentException excep) {
-            System.out.println("IllegalArgumentException: " + excep.getMessage());
+            System.out.println("\n\t\tIllegalArgumentException: " + excep.getMessage());
         }
-		
+			Loan testNewLoan2 = new Loan();
+			
+		System.out.print("\n\t\t TestNewLoan 2 -> "+ testNewLoan2.getTotalPayment());
 	}//closing the mains method
 
 
