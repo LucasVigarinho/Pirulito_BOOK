@@ -76,7 +76,6 @@ public class Exercise_12_06 {
 		}else {
 			return ch - '0';
 		}
-	}
-	
+	}//closing 
 	
 }//closing class exercise_12_06
