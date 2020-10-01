@@ -1,5 +1,5 @@
 package chapter_10;
-
+import java.util.Scanner;
 /** 
  * 			
  * 	(Geometry: the bounding rectangle) A bounding rectangle is the minimum rectangle
@@ -56,8 +56,25 @@ public class Exercise_10_15{
 		double width;
 		double height;
 		
-		
+		 // 1.0 2.5 3 4 5 6 7 8 9 10
+        System.out.print("Enter 5 given points: ");
+        Scanner input = new Scanner(System.in);
+        double[][] points = new double[5][2];
+        for (int i = 0; i < points.length; i++) {
+            points[i][0] = input.nextDouble();
+            points[i][1] = input.nextDouble();
+        }
+
+        MyRectangle2D r1 = MyRectangle2D.getRectangle(points);
+        System.out.println("Center point: " + r1.getCenterP().toString());
+        System.out.println("width = " + r1.getWidth());
+        System.out.println("height = " + r1.getHeight());
+    
 	}
+	
+	
+	/** Verify this link -> https://github.com/LuizGsa21/intro-to-java-10th-edition/blob/master/src/Chapter_10/Exercise_15.java */
+	
 
 }//closing the Exercise_10_01 method (used as driver method)
 

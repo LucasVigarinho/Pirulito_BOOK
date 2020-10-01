@@ -63,6 +63,8 @@ public class Exercise_10_18{
 
 
 	}//closing the main method
+	
+	/** Verify this link -> https://github.com/LuizGsa21/intro-to-java-10th-edition/blob/master/src/Chapter_10/Exercise_18.java */
 
 }//closing the Exercise_10_01 method (used as driver method)
 
