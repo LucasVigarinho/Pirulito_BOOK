@@ -32,7 +32,7 @@ public class Exercise_12_06 {
 		//creating a catch in order to handle the NumberFormatException
 		try {
 			System.out.println("The decimal value for hex number " +
-						hex + " is " + hexToDecimal(hex.toUpperCase());
+						hex + " is " + hexToDecimal(hex.toUpperCase()));
 			
 		}catch (NumberFormatException ex){
 			System.out.println(ex.getMessage());

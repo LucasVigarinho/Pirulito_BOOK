@@ -21,6 +21,7 @@ public class Exercise_12_07 {
 	/** Created the main method, in order to test all the methods that eventually has to be created and 
 	 * make possible the interaction with the user */
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		/** */
 		/** Testing the methods with a Binary Number  and with non Binary Number*/
@@ -31,6 +32,7 @@ public class Exercise_12_07 {
 		/** Print out the message calling the method */
 		System.out.println(bin2Dec(binary1));
 		input.close();
+		
 	}//closing the mains method
 
 
