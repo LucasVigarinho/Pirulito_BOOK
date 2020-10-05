@@ -53,6 +53,7 @@ public class Exercise_12_08 {
 			return 10 + ch - 'A';
 		else
 			return ch - '0';
+		
 	}
 	
 }//closing class exercise_12_08
