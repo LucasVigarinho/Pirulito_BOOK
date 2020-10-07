@@ -27,6 +27,7 @@ public class Extra_Racker_Hank_Anagram {
 			char [] arrayA = organize(aa);
 			char [] arrayB = organize(bb);
 
+			
 			int [] numbersA = numbers(arrayA);
 			int [] numbersB = numbers(arrayB);
 
