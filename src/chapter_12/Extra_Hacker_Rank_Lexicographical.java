@@ -36,7 +36,7 @@ package chapter_12;
  * 
  * The stub code in the editor then prints ava as our first line of output and wel as our second line of output.
  * */
-public class Extra_Hacker_Rank {
+public class Extra_Hacker_Rank_Lexicographical {
 
 	public static void main(String[] args) {
 		System.out.print("\n"+getSmallestAndLargest("welcometojava", 3));
