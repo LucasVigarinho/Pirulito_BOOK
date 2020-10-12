@@ -16,7 +16,7 @@ import java.util.Scanner;
 /** Created the main class, using the name of the package (12) and the exercise (06) in a compose name */
 public class Exercise_12_06 {
 	
-	
+	 
 	/** Created the main method, in order to test all the methods that eventually has to be created and 
 	 * make possible the interaction with the user */
 	public static void main(String[] args) {
