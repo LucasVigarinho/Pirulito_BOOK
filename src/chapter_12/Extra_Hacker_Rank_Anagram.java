@@ -1,8 +1,8 @@
 package chapter_12;
 
-public class Extra_Racker_Hank_Anagram {
+public class Extra_Hacker_Rank_Anagram {
 
-	public Extra_Racker_Hank_Anagram() {
+	public Extra_Hacker_Rank_Anagram() {
 		// TODO Auto-generated constructor stub
 
 	}
