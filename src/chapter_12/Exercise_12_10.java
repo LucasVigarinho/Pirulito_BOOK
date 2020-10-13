@@ -1,6 +1,5 @@
 package chapter_12;
 
-
 /**			EXERCISE DESCRIPTION 
  * 
  * 		(OutOfMemoryError) Write a program that causes the JVM to throw an
@@ -20,11 +19,17 @@ public class Exercise_12_10 {
 	public static void main(String[] args) {
 		
 		/** testing all the classes and methods */
+		int length = 1200000000;
 		
+		try {
+			byte[] array = new byte[length];
+			
+		}catch(OutOfMemoryError ex) {
+			System.out.println(ex.getMessage());
+		}
+			
+		System.out.println("Error founded and handled, program must go on");
 
-
-
-		
 	}//closing the mains method
 
 	
