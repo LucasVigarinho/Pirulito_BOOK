@@ -1,5 +1,5 @@
 package chapter_12;
-
+import java.util.Scanner;
 
 /**			EXERCISE DESCRIPTION 
  * 
@@ -25,10 +25,30 @@ public class Exercise_12_11 {
 	public static void main(String[] args) {
 		
 		/** testing all the classes and methods */
+		String removeS = "John";
+		String fileN = "/Users/lucasmaximo/git/Pirulito_BOOK/src/chapter_12/Exercise_12_11_text";
+
+//		String fileN = "laishfap oaspoihasddf John apsofihas John apsoifaspoasiufasiudf "
+//				+ "a;lsidfa;soijsa;i;alsifa;sifj John a;slifjasifj John  as;lfijasfij John "
+//				+ ";lias;ajd;sijJohn ;asifja;sdij John";
 		
+		StringBuffer til = new StringBuffer();
 
-
-
+		try (
+			Scanner in = new Scanner(new java.io.File(fileN));
+		){while(in.hasNext()) {
+			String line = in.nextLine();
+			if(line.indexOf(removeS) != -1) {
+				line.replace(removeS, " ");
+				til.append(line.replace(removeS, ""));
+			}else {
+				til.append(line);
+			}
+		}
+		System.out.println(til.toString());
+		}catch(java.io.FileNotFoundException f) {
+			System.out.println("File not found.");
+		}
 		
 	}//closing the mains method
 
