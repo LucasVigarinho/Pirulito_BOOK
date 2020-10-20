@@ -26,7 +26,7 @@ public class Exercise_12_02 {
 		int n1 = 0;
 		int n2 = 0;
 		while(true) {
-			System.out.print("Please enter in 2 integers to get their sum: ");        
+			System.out.print("Please enter in 2  integers to get their sum: ");        
 			try {
 				n1 = in.nextInt();
 				n2 = in.nextInt();
