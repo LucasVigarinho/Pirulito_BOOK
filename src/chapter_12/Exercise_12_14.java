@@ -29,7 +29,7 @@ public class Exercise_12_14 {
 		System.out.print("Enter a file of scores: ");
 		File file = new File(input.nextLine());
 
-		// Check if file exists
+		// Check if file exists 
 		if (!file.exists()) {
 			System.out.println("File " + file + " does not exist");
 			System.exit(1);
