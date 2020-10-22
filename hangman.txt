@@ -1,0 +1,46 @@
+wheels
+tyres
+petrol
+seat
+car Key
+oil
+seat Belt
+alarm
+radio
+house Key
+eletricity
+wather
+oven
+microwave
+toilet
+internet
+television
+windows
+Name of a clothes
+jumper
+moleton
+suit
+jacket
+trausers
+shorts
+shirt
+shoes
+underwear
+sofa
+chair
+table
+desk
+dinner table
+matriz
+bed
+wardraw
+drawer
+docker
+workbench
+whatsapp
+eclipse
+ratonal
+photoshop
+ilustrator
+corel draw
+postman

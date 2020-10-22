@@ -1,5 +1,9 @@
 package chapter_12;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
 /**			EXERCISE DESCRIPTION 
  * 
@@ -26,11 +30,33 @@ public class Exercise_12_16 {
 		
 		/** testing all the classes and methods */
 		
+			File fileName = new File ("Exercise12_15.txt");
+			
+			String oldString = "L e i t ã o";
+			String newString = "Leitão		";
+			
+			
+			String buffer = " ";
+			
+			try {
+				Scanner input = new Scanner(fileName);
+				while(input.hasNext()) {
+					buffer += (input.nextLine() + " \n");
+				}
+				input.close();
+			System.out.print("Old file: " + buffer);
+			buffer = buffer.replaceAll(oldString, newString + " ");
+			PrintWriter out = new PrintWriter(fileName);
+			out.write(buffer);
+			out.close();
+			System.out.println("File " + fileName.getName() + "saved...");
+			
+			}catch (FileNotFoundException ex){
+				ex.printStackTrace();
+			}
 
-
-
+			System.out.println("Updated file: ");
+			System.out.print(buffer);
 		
 	}//closing the mains method
-
-	
 }//closing class exercise_12_16
